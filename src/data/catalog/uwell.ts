@@ -1,6 +1,5 @@
-import image from '@/assets/product-pods.jpg';
+import caliburnG2 from '@/assets/products/38.webp.asset.json';
 import type { Product } from './types';
 export const uwellProducts: Product[] = [
-  { id: 1, slug: 'classic-pod-device', name: 'Classic Pod Device', sku: null, image, price: null, category: 'Uwell', bestseller: true, relatedProducts: ['graphite-pod-profile'] },
-  { id: 5, slug: 'graphite-pod-profile', name: 'Graphite Pod Profile', sku: null, image, price: null, category: 'Uwell', bestseller: true, relatedProducts: ['classic-pod-device'] },
+  { id: 4, slug: 'caliburn-g2-pod-system-kit', name: 'Caliburn G2 Pod System Kit', sku: '38', image: caliburnG2.url, price: 1149, category: 'Uwell', bestseller: true, relatedProducts: [] },
 ];
