@@ -48,6 +48,9 @@ export const Route = createFileRoute("/")({
 const spotlightWhatsAppUrl = contact.whatsapp
   ? `https://wa.me/${contact.whatsapp.replace(/\D/g, "")}?text=${encodeURIComponent("Hi, I read the Spotlight Review for the LUXE Q2 SE. Can you share availability?")}`
   : null;
+const heroWhatsAppUrl = contact.whatsapp
+  ? `https://wa.me/${contact.whatsapp.replace(/\D/g, "")}?text=${encodeURIComponent("Hi, I want to order vape in Kota")}`
+  : null;
 const reasons = [
   {
     title: "Strict authenticity",
@@ -95,11 +98,15 @@ function Home() {
               <Button
                 asChild
                 size="lg"
-                className="h-12 px-7 uppercase tracking-widest text-xs font-bold w-full sm:w-auto"
+                className="h-12 px-7 uppercase tracking-widest text-xs font-bold w-full sm:w-auto bg-[#25D366] text-black hover:bg-[#25D366]/90"
               >
-                <Link to="/shop" search={{ q: "", category: "" }}>
-                  Explore catalog <ArrowRight />
-                </Link>
+                <a
+                  href={heroWhatsAppUrl ?? "/shop"}
+                  target={heroWhatsAppUrl ? "_blank" : undefined}
+                  rel={heroWhatsAppUrl ? "noopener noreferrer" : undefined}
+                >
+                  Order only on WhatsApp <ArrowRight />
+                </a>
               </Button>
               <Button
                 asChild
