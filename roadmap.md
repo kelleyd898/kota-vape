@@ -1,3 +1,5 @@
-- [x] Build dark informational catalog, shared navigation, and requested content routes.
-- [x] Keep catalog and location content in editable data modules; avoid transactional flows.
-- [ ] Replace illustrative product entries and add verified business contact details (awaiting business information).
+- [x] Simplify cards and detail pages; add contained zoom, payment strip, extra features, and WhatsApp product message.
+- [x] Split the illustrative catalog by four categories and keep replacement pods in a separate collection and page.
+- [x] Use the four supplied category names with home-only category imagery, update navigation/filtering, and reduce gold saturation.
+- [x] Verify desktop/mobile navigation, filtering, detail pages and WhatsApp message.
+- [ ] Await verified product records, prices, WhatsApp number and business contact details from the owner.

@@ -17,6 +17,7 @@ import { Route as CategoriesRouteImport } from './routes/categories'
 import { Route as ContactRouteImport } from './routes/contact'
 import { Route as FaqRouteImport } from './routes/faq'
 import { Route as PrivacyPolicyRouteImport } from './routes/privacy-policy'
+import { Route as ReplacementPodsRouteImport } from './routes/replacement-pods'
 import { Route as ShopRouteImport } from './routes/shop'
 import { Route as TermsRouteImport } from './routes/terms'
 import { Route as ProductSlugRouteImport } from './routes/product.$slug'
@@ -61,6 +62,11 @@ const PrivacyPolicyRoute = PrivacyPolicyRouteImport.update({
   path: '/privacy-policy',
   getParentRoute: () => rootRouteImport,
 } as any)
+const ReplacementPodsRoute = ReplacementPodsRouteImport.update({
+  id: '/replacement-pods',
+  path: '/replacement-pods',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const ShopRoute = ShopRouteImport.update({
   id: '/shop',
   path: '/shop',
@@ -86,6 +92,7 @@ export interface FileRoutesByFullPath {
   '/contact': typeof ContactRoute
   '/faq': typeof FaqRoute
   '/privacy-policy': typeof PrivacyPolicyRoute
+  '/replacement-pods': typeof ReplacementPodsRoute
   '/shop': typeof ShopRoute
   '/terms': typeof TermsRoute
   '/product/$slug': typeof ProductSlugRoute
@@ -99,6 +106,7 @@ export interface FileRoutesByTo {
   '/contact': typeof ContactRoute
   '/faq': typeof FaqRoute
   '/privacy-policy': typeof PrivacyPolicyRoute
+  '/replacement-pods': typeof ReplacementPodsRoute
   '/shop': typeof ShopRoute
   '/terms': typeof TermsRoute
   '/product/$slug': typeof ProductSlugRoute
@@ -113,6 +121,7 @@ export interface FileRoutesById {
   '/contact': typeof ContactRoute
   '/faq': typeof FaqRoute
   '/privacy-policy': typeof PrivacyPolicyRoute
+  '/replacement-pods': typeof ReplacementPodsRoute
   '/shop': typeof ShopRoute
   '/terms': typeof TermsRoute
   '/product/$slug': typeof ProductSlugRoute
@@ -128,6 +137,7 @@ export interface FileRouteTypes {
     | '/contact'
     | '/faq'
     | '/privacy-policy'
+    | '/replacement-pods'
     | '/shop'
     | '/terms'
     | '/product/$slug'
@@ -141,6 +151,7 @@ export interface FileRouteTypes {
     | '/contact'
     | '/faq'
     | '/privacy-policy'
+    | '/replacement-pods'
     | '/shop'
     | '/terms'
     | '/product/$slug'
@@ -154,6 +165,7 @@ export interface FileRouteTypes {
     | '/contact'
     | '/faq'
     | '/privacy-policy'
+    | '/replacement-pods'
     | '/shop'
     | '/terms'
     | '/product/$slug'
@@ -168,6 +180,7 @@ export interface RootRouteChildren {
   ContactRoute: typeof ContactRoute
   FaqRoute: typeof FaqRoute
   PrivacyPolicyRoute: typeof PrivacyPolicyRoute
+  ReplacementPodsRoute: typeof ReplacementPodsRoute
   ShopRoute: typeof ShopRoute
   TermsRoute: typeof TermsRoute
   ProductSlugRoute: typeof ProductSlugRoute
@@ -231,6 +244,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof PrivacyPolicyRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/replacement-pods': {
+      id: '/replacement-pods'
+      path: '/replacement-pods'
+      fullPath: '/replacement-pods'
+      preLoaderRoute: typeof ReplacementPodsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/shop': {
       id: '/shop'
       path: '/shop'
@@ -264,6 +284,7 @@ const rootRouteChildren: RootRouteChildren = {
   ContactRoute: ContactRoute,
   FaqRoute: FaqRoute,
   PrivacyPolicyRoute: PrivacyPolicyRoute,
+  ReplacementPodsRoute: ReplacementPodsRoute,
   ShopRoute: ShopRoute,
   TermsRoute: TermsRoute,
   ProductSlugRoute: ProductSlugRoute,
