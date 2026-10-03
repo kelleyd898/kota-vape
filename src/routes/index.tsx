@@ -98,7 +98,7 @@ function Home() {
               <Button
                 asChild
                 size="lg"
-                className="h-12 px-7 uppercase tracking-widest text-xs font-bold w-full sm:w-auto bg-[#25D366] text-black hover:bg-[#25D366]/90"
+                className="h-12 px-7 uppercase tracking-widest text-xs font-bold w-full sm:w-auto bg-[#25D366] text-black shadow-[0_10px_30px_-8px_rgba(37,211,102,0.55)] transition-all duration-300 hover:bg-[#25D366]/90 hover:shadow-[0_14px_40px_-8px_rgba(37,211,102,0.75)] hover:-translate-y-0.5 hover:scale-[1.02] active:translate-y-0 active:scale-100"
               >
                 <a
                   href={heroWhatsAppUrl ?? "/shop"}
