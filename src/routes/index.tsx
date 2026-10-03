@@ -198,14 +198,9 @@ function Home() {
       </section>
       <section className="py-10 md:py-16 bg-surface">
         <div className="page-container">
-          <SectionHeading
-            kicker="The edit"
-            title="Trending now"
-            description="A closer look at formats and designs in our catalog."
-            link="/shop"
-          />
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3 md:gap-5">
-            {products.slice(0, 4).map((p) => (
+          <SectionHeading kicker="The collection" title="Trending Now" link="/shop" />
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-3 md:gap-5">
+            {trendingProducts.map((p) => (
               <ProductCard key={p.id} product={p} />
             ))}
           </div>
