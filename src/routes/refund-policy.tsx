@@ -84,6 +84,16 @@ const sections: { title: string; body: string[]; list?: string[] }[] = [
   },
 ];
 
+const EMAIL = 'support@vapeshopjaipur1.com';
+
+function renderEmail(text: string) {
+  const parts = text.split(EMAIL);
+  if (parts.length === 1) return text;
+  return parts.map((part, i) => (
+    <span key={i}>{part}{i < parts.length - 1 && <span className="text-white">{EMAIL}</span>}</span>
+  ));
+}
+
 function RefundPolicy() {
   return (
     <article className="page-container py-8 md:py-16 max-w-4xl">
