@@ -1,5 +1,5 @@
-- [ ] Simplify cards and detail pages; add contained zoom, payment strip, extra features, and WhatsApp product message.
-- [ ] Split the illustrative catalog by four categories and keep replacement pods in a separate collection and page.
-- [ ] Use the four supplied category names with home-only category imagery, update navigation/filtering, and reduce gold saturation.
-- [ ] Verify desktop/mobile navigation, filtering, detail pages and WhatsApp message.
+- [x] Simplify cards and detail pages; add contained zoom, payment strip, extra features, and WhatsApp product message.
+- [x] Split the illustrative catalog by four categories and keep replacement pods in a separate collection and page.
+- [x] Use the four supplied category names with home-only category imagery, update navigation/filtering, and reduce gold saturation.
+- [x] Verify desktop/mobile navigation, filtering, detail pages and WhatsApp message.
 - [ ] Await verified product records, prices, WhatsApp number and business contact details from the owner.
