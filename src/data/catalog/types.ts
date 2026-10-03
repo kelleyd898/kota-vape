@@ -6,6 +6,7 @@ export type Product = {
   sku: string | null;
   image: string;
   price: number | null;
+  originalPrice?: number;
   category: CategoryName;
   bestseller: boolean;
   relatedProducts: string[];
