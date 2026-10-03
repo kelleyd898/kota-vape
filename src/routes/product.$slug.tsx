@@ -29,7 +29,7 @@ function ProductDetail() {
   const whatsappUrl = origin ? productWhatsAppUrl(product, origin) : null;
   const related = getRelatedProducts(product);
   const price = product.price === null ? 'Price on inquiry' : `₹${product.price.toLocaleString('en-IN')}`;
-  return <div className="page-container py-10 md:py-14">
+  return <div className="page-container py-6 md:py-14">
     <div className="flex flex-wrap items-center gap-2 text-[11px] uppercase tracking-wider text-muted-foreground mb-8"><Link to="/" className="hover:text-primary">Home</Link><ChevronRight size={12}/><Link to="/shop" search={{ q: '', category: product.category }} className="hover:text-primary">{product.category}</Link><ChevronRight size={12}/><span className="text-foreground normal-case break-words">{product.name}</span></div>
     <div className="grid lg:grid-cols-[minmax(0,.8fr)_minmax(0,1fr)] gap-9 lg:gap-14 items-start">
       <div className="min-w-0"><div className="group aspect-square max-w-[480px] border border-border bg-secondary overflow-hidden cursor-zoom-in" onMouseMove={event => { const rect = event.currentTarget.getBoundingClientRect(); setZoom({ x: (event.clientX - rect.left) / rect.width * 100, y: (event.clientY - rect.top) / rect.height * 100 }); }}><img src={product.image} alt={`Illustrative image for ${product.name}`} width={1024} height={1024} style={{ transformOrigin: `${zoom.x}% ${zoom.y}%` }} className="w-full h-full object-cover transition-transform duration-200 group-hover:scale-[1.65]"/></div></div>
@@ -42,7 +42,7 @@ function ProductDetail() {
         <div className="mt-8 max-w-md"><p className="text-sm font-semibold mb-4">Extra Features</p><ul className="space-y-3 text-sm">{extraFeatures.map(feature => <li key={feature} className="flex items-center gap-2.5"><CheckCircle2 size={18} className="accent-green shrink-0"/><span>{feature}</span></li>)}</ul></div>
       </div>
     </div>
-    <section className="mt-16">
+    <section className="mt-12 md:mt-16">
       <div className="border-y border-border py-4 text-center"><h2 className="inline-block text-xs sm:text-sm font-bold uppercase tracking-[0.2em] border-b-2 border-primary pb-1 px-6">Reviews (0)</h2></div>
       <div className="grid lg:grid-cols-2 gap-10 lg:gap-16 pt-10">
         <div><h3 className="font-display text-2xl sm:text-3xl font-semibold">Reviews</h3><p className="text-muted-foreground mt-4">There are no reviews yet.</p></div>
@@ -60,6 +60,6 @@ function ProductDetail() {
         </div>
       </div>
     </section>
-    {related.length > 0 && <section className="mt-20"><h2 className="font-display text-3xl mb-8">Related products</h2><div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3 md:gap-5">{related.map(item => <ProductCard key={item.id} product={item}/>)}</div></section>}
+    {related.length > 0 && <section className="mt-14 md:mt-20"><h2 className="font-display text-2xl md:text-3xl mb-6 md:mb-8">Related products</h2><div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3 md:gap-5">{related.map(item => <ProductCard key={item.id} product={item}/>)}</div></section>}
   </div>;
 }
