@@ -1,18 +1,22 @@
 import { useState } from 'react';
 import { createFileRoute, Link } from '@tanstack/react-router';
+import { zodValidator, fallback } from '@tanstack/zod-adapter';
+import { z } from 'zod';
 import { Search } from 'lucide-react';
 import { ProductCard } from '@/components/site/ProductCard';
 import { Button } from '@/components/ui/button';
 import { products } from '@/data/products';
 import { categories } from '@/data/categories';
 
+const shopSearchSchema = z.object({
+  q: fallback(z.string(), '').default(''),
+  category: fallback(z.string(), '').default(''),
+  sort: fallback(z.string(), 'featured').default('featured'),
+  page: fallback(z.number().int(), 1).default(1),
+});
+
 export const Route = createFileRoute('/shop')({
-  validateSearch: (search: Record<string, unknown>) => ({
-    q: typeof search['q'] === 'string' ? search['q'] : '',
-    category: typeof search['category'] === 'string' ? search['category'] : typeof search['brand'] === 'string' ? search['brand'] : '',
-    sort: typeof search['sort'] === 'string' ? search['sort'] : 'featured',
-    page: Number(search['page']) > 0 ? Number(search['page']) : 1,
-  }),
+  validateSearch: zodValidator(shopSearchSchema),
   head: () => ({ meta: [{ title: 'Shop Catalog | KOTA VAPE SHOP' }, { name: 'description', content: 'Browse product information by category in the KOTA VAPE SHOP catalog.' }, { property: 'og:title', content: 'Shop Catalog | KOTA VAPE SHOP' }, { property: 'og:description', content: 'Explore product information by category.' }, { property: 'og:type', content: 'website' }, { name: 'twitter:card', content: 'summary_large_image' }] }),
   component: Shop,
 });
