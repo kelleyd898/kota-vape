@@ -289,7 +289,7 @@ function Home() {
       <section className="bg-surface py-10 md:py-16 border-t border-border">
         <div className="page-container">
           <h2 className="section-title text-primary">Setting the Standard for Premium Gear Accessibility</h2>
-          <div className="text-muted-foreground leading-8 text-sm md:text-base space-y-5 max-w-3xl mt-6">
+          <div className="text-muted-foreground leading-8 text-sm md:text-base space-y-5 max-w-none md:max-w-5xl lg:max-w-none mt-6">
             <p>
               Whether you are searching for the best vape shop in jaipur or looking to upgrade your collection with
               genuine international modules, our digital-first catalog brings the world's best tech directly to you. We
