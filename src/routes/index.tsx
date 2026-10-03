@@ -112,9 +112,6 @@ function Home() {
             </div>
           </div>
         </div>
-        <div className="absolute bottom-5 left-5 lg:left-8 z-10 text-[10px] uppercase tracking-[0.25em] text-muted-foreground">
-          01 / Discover the collection
-        </div>
       </section>
       <div className="overflow-hidden border-y border-border bg-primary py-3 text-primary-foreground">
         <div className="marquee-track text-[11px] uppercase font-bold tracking-[0.2em]">
