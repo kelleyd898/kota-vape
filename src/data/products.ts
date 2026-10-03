@@ -1,23 +1,7 @@
-import podImage from '@/assets/product-pods.jpg';
-import disposableImage from '@/assets/product-disposable.jpg';
-import kitImage from '@/assets/product-kit.jpg';
-import bottleImage from '@/assets/product-bottle.jpg';
-
-export type Product = {
-  id: number; name: string; slug: string; price: number | null; oldPrice: number | null;
-  description: string; shortDescription: string; category: string; brand: string;
-  image: string; gallery: string[]; featured: boolean; bestseller: boolean;
-  newProduct: boolean; sale: boolean; specifications: Record<string, string>; relatedProducts: string[];
-};
-
-// Illustrative catalog entries only. Confirm names, imagery, pricing and availability before publication.
-export const products: Product[] = [
-  { id: 1, name: 'Classic Pod Device', slug: 'classic-pod-device', price: null, oldPrice: null, description: 'A compact pod-format device profile. Contact our team for verified specifications and current availability.', shortDescription: 'A compact everyday pod profile.', category: 'Pod Systems', brand: 'Uwell', image: podImage, gallery: [podImage, kitImage], featured: true, bestseller: true, newProduct: false, sale: false, specifications: { Format: 'Pod system', Finish: 'Graphite', 'Product information': 'Confirm with our team' }, relatedProducts: ['silver-pod-kit', 'replacement-pod'] },
-  { id: 2, name: 'Forest Edition Device', slug: 'forest-edition-device', price: null, oldPrice: null, description: 'A streamlined device concept with a deep green finish. Ask our team for current product details.', shortDescription: 'Slim profile with a forest finish.', category: 'Devices', brand: 'Elf Bar', image: disposableImage, gallery: [disposableImage], featured: true, bestseller: false, newProduct: true, sale: false, specifications: { Format: 'Compact device', Finish: 'Forest green', 'Product information': 'Confirm with our team' }, relatedProducts: ['classic-pod-device', 'silver-pod-kit'] },
-  { id: 3, name: 'Silver Pod Kit', slug: 'silver-pod-kit', price: null, oldPrice: null, description: 'An understated silver pod kit profile for those researching compact hardware. Confirm model information with our team.', shortDescription: 'Refined silver hardware profile.', category: 'Pod Systems', brand: 'Iget', image: kitImage, gallery: [kitImage, podImage], featured: true, bestseller: true, newProduct: false, sale: false, specifications: { Format: 'Pod kit', Finish: 'Silver', 'Product information': 'Confirm with our team' }, relatedProducts: ['classic-pod-device', 'replacement-pod'] },
-  { id: 4, name: 'Flavor Profile Guide', slug: 'flavor-profile-guide', price: null, oldPrice: null, description: 'A visual reference for understanding flavor profiles and product formats. Contact us for verified information.', shortDescription: 'Explore format and flavor information.', category: 'E-Liquids', brand: 'Pod Salt', image: bottleImage, gallery: [bottleImage], featured: false, bestseller: false, newProduct: false, sale: false, specifications: { Format: 'Information guide', 'Product information': 'Confirm with our team' }, relatedProducts: ['classic-pod-device'] },
-  { id: 5, name: 'Graphite Pod Profile', slug: 'graphite-pod-profile', price: null, oldPrice: null, description: 'A graphite-finish pod system reference. Our catalog is designed to make product research simpler.', shortDescription: 'Minimal graphite pod format.', category: 'Pod Systems', brand: 'Uwell', image: podImage, gallery: [podImage], featured: true, bestseller: true, newProduct: false, sale: false, specifications: { Format: 'Pod system', Finish: 'Graphite' }, relatedProducts: ['silver-pod-kit'] },
-  { id: 6, name: 'Replacement Pod', slug: 'replacement-pod', price: null, oldPrice: null, description: 'A replacement pod information listing. Compatibility varies by device; contact our team to confirm the right fit.', shortDescription: 'Compatibility guidance for pod systems.', category: 'Replacement Pods', brand: 'Uwell', image: kitImage, gallery: [kitImage], featured: false, bestseller: true, newProduct: false, sale: false, specifications: { Format: 'Replacement component', Compatibility: 'Confirm with our team' }, relatedProducts: ['classic-pod-device', 'silver-pod-kit'] },
-  { id: 7, name: 'Emerald Device Profile', slug: 'emerald-device-profile', price: null, oldPrice: null, description: 'A visual catalog entry for a compact green-finish device. Inquire for verified details.', shortDescription: 'Compact device in deep green.', category: 'Devices', brand: 'Elf Bar', image: disposableImage, gallery: [disposableImage], featured: true, bestseller: false, newProduct: true, sale: false, specifications: { Format: 'Compact device', Finish: 'Green' }, relatedProducts: ['forest-edition-device'] },
-  { id: 8, name: 'Metallic Kit Profile', slug: 'metallic-kit-profile', price: null, oldPrice: null, description: 'An editorial look at a metallic pod format. Reach out to verify specific models and compatibility.', shortDescription: 'An understated metallic format.', category: 'Pod Systems', brand: 'Iget', image: kitImage, gallery: [kitImage], featured: true, bestseller: true, newProduct: false, sale: false, specifications: { Format: 'Pod kit', Finish: 'Metallic' }, relatedProducts: ['silver-pod-kit'] },
-];
+import { elfBarProducts } from './catalog/elfBar';
+import { uwellProducts } from './catalog/uwell';
+import { podSaltProducts } from './catalog/podSalt';
+import { igetProducts } from './catalog/iget';
+export type { Product } from './catalog/types';
+// Illustrative references only; no prices, SKU values, or availability are inferred.
+export const products = [...elfBarProducts, ...uwellProducts, ...podSaltProducts, ...igetProducts];

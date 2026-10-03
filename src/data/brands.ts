@@ -1,1 +1,2 @@
-export const brands = ['Elf Bar', 'Iget', 'Uwell', 'Pod Salt'];
+import { categories } from './categories';
+export const brands = categories.map(category => category.name);
