@@ -15,6 +15,7 @@ import { SectionHeading } from "@/components/site/SectionHeading";
 import { products } from "@/data/products";
 import { replacementPods } from "@/data/catalog/replacementPods";
 import { categories } from "@/data/categories";
+import { cities } from "@/data/cities";
 import heroImage from "@/assets/hero-vape.jpg";
 import elfImage from "@/assets/categories/elf.webp.asset.json";
 import uwellImage from "@/assets/categories/uwell.webp.asset.json";
