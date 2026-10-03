@@ -223,12 +223,15 @@ function Home() {
       </section>
       <section className="grid lg:grid-cols-2 min-h-[480px] bg-secondary">
         <div className="flex items-center justify-center p-10 md:p-14">
-          <img
-            src={imageOnRequest.url}
-            alt="Image available on request"
-            loading="lazy"
-            className="w-40 h-40 md:w-52 md:h-52 object-contain rounded-lg border border-border bg-background p-2"
-          />
+          <div className="relative">
+            <img
+              src={imageOnRequest.url}
+              alt="Image available on request"
+              loading="lazy"
+              className="w-56 h-56 md:w-72 md:h-72 object-contain rounded-lg border border-border bg-background p-2"
+            />
+            <span className="review-badge absolute -top-3 left-4">Featured Review</span>
+          </div>
         </div>
         <div className="px-6 py-10 md:py-14 md:px-16 lg:px-20 flex flex-col justify-center">
           <h2 className="font-display text-4xl md:text-6xl leading-none font-semibold max-w-lg text-primary">
