@@ -5,3 +5,4 @@
 - [ ] Await verified product records, prices, WhatsApp number and business contact details from the owner.
 - [x] Add fixed bottom-center query prompt and update floating WhatsApp message.
 - [x] Use supplied SEO phrases for Kota naturally without a scrolling keyword strip; clean logo outside its circle.
+- [x] Update homepage headings and spotlight copy, remove the four-value strip, and direct the spotlight inquiry to WhatsApp.
