@@ -83,7 +83,7 @@ function Home() {
         <div className="absolute inset-0 bg-gradient-to-r from-background via-background/85 to-transparent" />
         <div className="page-container relative z-10 py-14 md:py-16">
           <div className="max-w-[600px]">
-            <p className="eyebrow">Kota, Rajasthan</p>
+            <p className="sr-only">Kota, Rajasthan</p>
             <h1 className="font-display text-[clamp(3rem,15vw,8rem)] font-semibold leading-[0.85]">
               KOTA
               <br />
