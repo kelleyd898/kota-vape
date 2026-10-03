@@ -42,8 +42,8 @@
   display: inline-block;
   padding: .45rem .9rem;
   border-radius: .5rem;
-  background: oklch(0.82 0.15 85);
-  color: oklch(0.18 0.02 85);
+  background: oklch(0.74 0.09 168);
+  color: oklch(0.14 0.02 168);
   text-transform: uppercase;
   letter-spacing: .12em;
   font-size: .68rem;
