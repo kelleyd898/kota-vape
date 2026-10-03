@@ -48,6 +48,9 @@ export const Route = createFileRoute("/")({
 const spotlightWhatsAppUrl = contact.whatsapp
   ? `https://wa.me/${contact.whatsapp.replace(/\D/g, "")}?text=${encodeURIComponent("Hi, I read the Spotlight Review for the LUXE Q2 SE. Can you share availability?")}`
   : null;
+const heroWhatsAppUrl = contact.whatsapp
+  ? `https://wa.me/${contact.whatsapp.replace(/\D/g, "")}?text=${encodeURIComponent("Hi, I want to order vape in Kota")}`
+  : null;
 const reasons = [
   {
     title: "Strict authenticity",
