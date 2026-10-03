@@ -15,7 +15,6 @@ export function SiteLayout({ children }: { children: React.ReactNode }) {
   const [menuOpen, setMenuOpen] = useState(false);
   const [searchOpen, setSearchOpen] = useState(false);
   return <div className="min-h-screen bg-background text-foreground">
-    <div className="border-b border-border bg-surface text-center text-[10px] font-semibold uppercase tracking-[0.18em] text-muted-foreground py-2.5 px-4">An informational catalog for adults · Product details subject to verification</div>
     <header className="sticky top-0 z-50 border-b border-border bg-background/95 backdrop-blur-xl">
       <div className="mx-auto max-w-7xl px-5 lg:px-8 h-[76px] grid grid-cols-[minmax(0,1fr)_auto] xl:grid-cols-[auto_minmax(0,1fr)_auto] items-center gap-4">
         <Link to="/" className="min-w-0 leading-none group flex items-center gap-3" aria-label="Kota Vape Shop home"><img src={logoImage} alt="Kota Vape Shop logo" width={1024} height={1024} className="h-12 w-12 sm:h-14 sm:w-14 object-contain"/><span className="hidden sm:block"><span className="block font-display font-bold text-[21px] sm:text-[25px] tracking-[0.11em] text-foreground">KOTA<span className="text-primary">.</span></span><span className="block text-[9px] tracking-[0.32em] text-primary mt-1.5">VAPE SHOP</span></span></Link>
