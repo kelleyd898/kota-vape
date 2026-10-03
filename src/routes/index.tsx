@@ -13,6 +13,7 @@ import { Button } from "@/components/ui/button";
 import { ProductCard } from "@/components/site/ProductCard";
 import { SectionHeading } from "@/components/site/SectionHeading";
 import { products } from "@/data/products";
+import { replacementPods } from "@/data/catalog/replacementPods";
 import { categories } from "@/data/categories";
 import { cities } from "@/data/cities";
 import heroImage from "@/assets/hero-vape.jpg";
@@ -26,6 +27,12 @@ const homeCategorySlugs = ["elf-bar", "uwell", "pod-salt", "iget"];
 const homeCategories = homeCategorySlugs
   .map((slug) => categories.find((c) => c.slug === slug)!)
   .filter(Boolean);
+const allProducts = [...products, ...replacementPods];
+const trendingProducts = allProducts.slice(0, 8);
+const bestSellerProducts = [
+  ...allProducts.filter((p) => p.bestseller),
+  ...allProducts.filter((p) => !p.bestseller),
+].slice(0, 8);
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -161,12 +168,7 @@ function Home() {
         </div>
       </section>
       <section className="py-10 md:py-16 page-container">
-        <SectionHeading
-          kicker="The brands"
-          title="Explore by brand"
-          description="Looking for a vape shop in Kota? Explore distinct names and formats in our research catalog."
-          link="/categories"
-        />
+        <SectionHeading kicker="The edit" title="Categories" link="/categories" />
         <div className="grid grid-cols-2 md:grid-cols-4 gap-3 md:gap-5">
           {homeCategories.map((category, i) => (
             <Link
@@ -196,33 +198,20 @@ function Home() {
       </section>
       <section className="py-10 md:py-16 bg-surface">
         <div className="page-container">
-          <SectionHeading
-            kicker="The edit"
-            title="Trending now"
-            description="A closer look at formats and designs in our catalog."
-            link="/shop"
-          />
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3 md:gap-5">
-            {products.slice(0, 4).map((p) => (
+          <SectionHeading kicker="The collection" title="Trending Now" link="/shop" />
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-3 md:gap-5">
+            {trendingProducts.map((p) => (
               <ProductCard key={p.id} product={p} />
             ))}
           </div>
         </div>
       </section>
       <section className="py-10 md:py-16 page-container">
-        <SectionHeading
-          kicker="The collection"
-          title="Best sellers"
-          description="Popular catalog entries to compare and research."
-          link="/shop"
-        />
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3 md:gap-5">
-          {products
-            .filter((p) => p.bestseller)
-            .slice(0, 4)
-            .map((p) => (
-              <ProductCard key={p.id} product={p} />
-            ))}
+        <SectionHeading title="Best Sellers" link="/shop" />
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-3 md:gap-5">
+          {bestSellerProducts.map((p) => (
+            <ProductCard key={p.id} product={p} />
+          ))}
         </div>
       </section>
       <section className="bg-surface py-10 md:py-16">
