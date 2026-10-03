@@ -3,5 +3,5 @@
 - [x] Use the four supplied category names with home-only category imagery, update navigation/filtering, and reduce gold saturation.
 - [x] Verify desktop/mobile navigation, filtering, detail pages and WhatsApp message.
 - [ ] Await verified product records, prices, WhatsApp number and business contact details from the owner.
-- [ ] Add fixed bottom-center query prompt and update floating WhatsApp message.
-- [ ] Use supplied SEO phrases for Kota naturally without a scrolling keyword strip; clean logo outside its circle.
+- [x] Add fixed bottom-center query prompt and update floating WhatsApp message.
+- [x] Use supplied SEO phrases for Kota naturally without a scrolling keyword strip; clean logo outside its circle.
