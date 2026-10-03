@@ -65,18 +65,18 @@ function ShippingPolicy() {
   return (
     <article className="page-container py-8 md:py-16 max-w-4xl">
       <p className="eyebrow">Policy</p>
-      <h1 className="section-title mb-6">Shipping Policy</h1>
+      <h1 className="section-title mb-6 text-white">Shipping Policy</h1>
       <div className="space-y-6 text-muted-foreground leading-8">
         <p>Welcome to the official Shipping Policy of Vape Shop Jaipur. We know that when you order premium vaping products, you want them delivered securely and as quickly as possible. This policy outlines our order processing times, shipping rates, delivery estimates, and important guidelines regarding the safe transit of our products across India. Please review this information carefully before placing your order on http://vapeshopjaipur1.com.</p>
         <div className="border border-border bg-surface p-6">
-          <h2 className="font-display text-2xl text-foreground mb-3">Table of Contents</h2>
-          <ol className="list-decimal list-inside space-y-1 text-sm leading-7">
+          <h2 className="font-display text-2xl text-white mb-3">Table of Contents</h2>
+          <ol className="list-decimal list-inside space-y-1 text-sm leading-7 text-white">
             {sections.map((s) => <li key={s.title}>{s.title}</li>)}
           </ol>
         </div>
         {sections.map((section) => (
           <section key={section.title}>
-            <h2 className="font-display text-3xl text-foreground mb-3">{section.title}</h2>
+            <h2 className="font-display text-3xl text-white mb-3">{section.title}</h2>
             {section.body.map((paragraph, i) => <p key={i}>{paragraph}</p>)}
           </section>
         ))}

@@ -78,18 +78,18 @@ function PrivacyPolicy() {
   return (
     <article className="page-container py-8 md:py-16 max-w-4xl">
       <p className="eyebrow">Policy</p>
-      <h1 className="section-title mb-6">Privacy Policy</h1>
+      <h1 className="section-title mb-6 text-white">Privacy Policy</h1>
       <div className="space-y-6 text-muted-foreground leading-8">
         <p>Welcome to the official Privacy Policy of Vape Shop Jaipur. Your privacy is critically important to us, and we are committed to protecting the personal information you share with us while browsing or shopping on our platform. This document explains how we collect, use, and safeguard your data, ensuring a secure experience for all our customers.</p>
         <div className="border border-border bg-surface p-6">
-          <h2 className="font-display text-2xl text-foreground mb-3">Table of Contents</h2>
-          <ol className="list-decimal list-inside space-y-1 text-sm leading-7">
+          <h2 className="font-display text-2xl text-white mb-3">Table of Contents</h2>
+          <ol className="list-decimal list-inside space-y-1 text-sm leading-7 text-white">
             {sections.map((s) => <li key={s.title}>{s.title}</li>)}
           </ol>
         </div>
         {sections.map((section) => (
           <section key={section.title}>
-            <h2 className="font-display text-3xl text-foreground mb-3">{section.title}</h2>
+            <h2 className="font-display text-3xl text-white mb-3">{section.title}</h2>
             {section.body.map((paragraph, i) => <p key={i}>{paragraph}</p>)}
           </section>
         ))}
