@@ -88,20 +88,20 @@ function RefundPolicy() {
   return (
     <article className="page-container py-8 md:py-16 max-w-4xl">
       <p className="eyebrow">Policy</p>
-      <h1 className="section-title mb-6">Refund and Returns Policy</h1>
+      <h1 className="section-title mb-6 text-white">Refund and Returns Policy</h1>
       <div className="space-y-6 text-muted-foreground leading-8">
         <p>At Vape Shop Jaipur, your satisfaction is our top priority. We strive to provide premium vaping products to our adult customers. However, we understand that there may be occasions where you need to return an item or request a refund. This detailed Refund and Returns Policy outlines the conditions, timeframes, and processes for returning products purchased from our platform, http://vapeshopjaipur1.com.</p>
         <p>Our policy is designed to be fair, transparent, and compliant with consumer protection standards, while also recognizing the specific nature of consumable and electronic vaping products. Please read this policy carefully before making a purchase.</p>
         <div className="border border-border bg-surface p-6">
-          <h2 className="font-display text-2xl text-foreground mb-3">Table of Contents</h2>
-          <ol className="list-decimal list-inside space-y-1 text-sm leading-7">
+          <h2 className="font-display text-2xl text-white mb-3">Table of Contents</h2>
+          <ol className="list-decimal list-inside space-y-1 text-sm leading-7 text-white">
             {sections.map((s) => <li key={s.title}>{s.title}</li>)}
           </ol>
         </div>
         {sections.map((section) => (
           <section key={section.title}>
-            <h2 className="font-display text-3xl text-foreground mb-3">{section.title}</h2>
-            {section.body.map((paragraph, i) => <p key={i}>{paragraph}</p>)}
+            <h2 className="font-display text-3xl text-white mb-3">{section.title}</h2>
+            {section.body.map((paragraph, i) => <p key={i}>{renderEmail(paragraph)}</p>)}
             {section.list && <ul className="list-disc list-inside space-y-1 mt-3">{section.list.map((item) => <li key={item}>{item}</li>)}</ul>}
           </section>
         ))}
