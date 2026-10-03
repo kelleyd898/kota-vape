@@ -5,7 +5,7 @@ import { ProductCard } from '@/components/site/ProductCard';
 import { Button } from '@/components/ui/button';
 import { getProductBySlug, getRelatedProducts } from '@/services/productService';
 import { productWhatsAppUrl } from '@/lib/whatsapp';
-import paymentStrip from '@/assets/paymentstrip.png.asset.json';
+import paymentStrip from '@/assets/paymentstrip.png';
 import { contact } from '@/config/contact';
 export const Route = createFileRoute('/product/$slug')({
   loader: ({ params }) => { const product = getProductBySlug(params.slug); if (!product) throw notFound(); return product; },
@@ -38,7 +38,7 @@ function ProductDetail() {
         <p className="accent-green text-2xl sm:text-3xl font-semibold mt-5">{price}</p>
         <div className="mt-6 max-w-sm">{whatsappUrl ? <Button asChild size="lg" className="w-full"><a href={whatsappUrl} target="_blank" rel="noopener noreferrer"><MessageCircle size={18}/> Get on WhatsApp</a></Button> : <Button asChild size="lg" variant="outline" className="w-full"><Link to="/contact"><MessageCircle size={18}/> Contact for details</Link></Button>}</div>{!contact.whatsapp && <p className="mt-3 text-xs text-muted-foreground">WhatsApp enquiries will be available once the business number is confirmed.</p>}
         <div className="mt-6 space-y-2 text-sm"><p><span className="font-semibold">SKU:</span> {product.sku ?? 'On inquiry'}</p><p><span className="font-semibold uppercase">Category:</span> <Link to="/shop" search={{ q: '', category: product.category }} className="hover:text-primary">{product.category}</Link></p></div>
-        <div className="mt-7 border border-dashed border-border px-5 sm:px-8 py-5 text-center max-w-md"><p className="text-xs sm:text-sm font-semibold tracking-wide">Guaranteed Safe Checkout</p><img src={paymentStrip.url} alt="Mastercard, Visa, Amex and Discover" className="mt-4 mx-auto w-full max-w-[300px] h-auto"/></div>
+        <div className="mt-7 border border-dashed border-border px-5 sm:px-8 py-5 text-center max-w-md"><p className="text-xs sm:text-sm font-semibold tracking-wide">Guaranteed Safe Checkout</p><img src={paymentStrip} alt="Mastercard, Visa, Amex and Discover" className="mt-4 mx-auto w-full max-w-[300px] h-auto"/></div>
         <div className="mt-8 max-w-md"><p className="text-sm font-semibold mb-4">Extra Features</p><ul className="space-y-3 text-sm">{extraFeatures.map(feature => <li key={feature} className="flex items-center gap-2.5"><CheckCircle2 size={18} className="accent-green shrink-0"/><span>{feature}</span></li>)}</ul></div>
       </div>
     </div>
