@@ -6,3 +6,5 @@
 - [x] Add fixed bottom-center query prompt and update floating WhatsApp message.
 - [x] Use supplied SEO phrases for Kota naturally without a scrolling keyword strip; clean logo outside its circle.
 - [x] Update homepage headings and spotlight copy, remove the four-value strip, and direct the spotlight inquiry to WhatsApp.
+- [x] Replace 12 illustrative replacement pods with the supplied JUUL2 records, nine supplied photos, sale price, and bestseller placement.
+- [ ] Await the remaining three JUUL2 photos (SKUs 439, 441, 435) from the owner; show image-on-request until provided.
