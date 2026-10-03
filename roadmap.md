@@ -1,0 +1,3 @@
+- [x] Build dark informational catalog, shared navigation, and requested content routes.
+- [x] Keep catalog and location content in editable data modules; avoid transactional flows.
+- [ ] Replace illustrative product entries and add verified business contact details (awaiting business information).
