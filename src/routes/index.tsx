@@ -288,22 +288,17 @@ function Home() {
       </section>
       <section className="bg-surface py-10 md:py-16 border-t border-border">
         <div className="page-container">
-          <h2 className="section-title text-primary">About us</h2>
+          <h2 className="section-title text-primary">Setting the Standard for Premium Gear Accessibility</h2>
           <div className="text-muted-foreground leading-8 text-sm md:text-base space-y-5 max-w-3xl mt-6">
             <p>
-              Whether you are searching for the best vape shop in jaipur or looking to upgrade your collection with
-              genuine international modules, our digital-first catalog brings the world's best tech directly to you. We
-              understand that finding an authentic vape store jaipur can be challenging, which is why our
-              community-driven platform eliminates the hassle. From the busy commercial hubs of Sindhi Camp and Sansar
-              Chandra Road to the premium residential sectors of Bani Park and Kabir Marg, we have established a
-              foolproof, private logistics network.
+              Looking for the best vape shop in jaipur or genuine international modules? Our digital-first catalog
+              brings the world's best tech directly to you. From Sindhi Camp and Sansar Chandra Road to Bani Park and
+              Kabir Marg, our private logistics network keeps delivery fast and discreet.
             </p>
             <p>
-              Our commitment to quality makes us the top-rated vape shop jaipur enthusiast portal. We strictly curate
-              100% genuine products, ensuring that clients living in the heritage core near Gangori Bazaar or enjoying
-              the scenic outskirts of Amer (opposite Nahargarh Biological Park) receive the exact same high-end,
-              discreet consultation. If you are typing "vape shop near me jaipur" into your browser, look no further.
-              Drop a secure WhatsApp query today to access our private collection.
+              We curate 100% genuine products — from the heritage core near Gangori Bazaar to the outskirts of Amer,
+              everyone gets the same high-end, private consultation. Typing "vape shop near me jaipur"? Drop a secure
+              WhatsApp query today to access our private collection.
             </p>
           </div>
         </div>
