@@ -81,7 +81,7 @@ function Home() {
           className="absolute inset-0 w-full h-full object-cover object-[72%_center] md:object-[62%_center] opacity-75"
         />
         <div className="absolute inset-0 bg-gradient-to-r from-background via-background/85 to-transparent" />
-        <div className="page-container relative z-10 py-14 md:py-16">
+        <div className="page-container relative z-10 pt-14 pb-28 md:pt-16 md:pb-36">
           <div className="max-w-[600px]">
             <p className="sr-only">Kota, Rajasthan</p>
             <h1 className="font-display text-[clamp(3rem,15vw,8rem)] font-semibold leading-[0.85]">
