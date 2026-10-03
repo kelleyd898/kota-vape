@@ -1,6 +1,7 @@
 import { createFileRoute, Link, notFound } from '@tanstack/react-router';
 import { useState, useEffect } from 'react';
 import { CheckCircle2, ChevronRight, MessageCircle, Star } from 'lucide-react';
+import { AllIndiaStrip } from '@/components/site/AllIndiaStrip';
 import { ProductCard } from '@/components/site/ProductCard';
 import { Button } from '@/components/ui/button';
 import { getProductBySlug, getRelatedProducts } from '@/services/productService';
