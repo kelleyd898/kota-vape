@@ -37,4 +37,5 @@
 @utility page-container { width: 100%; max-width: 80rem; margin-inline: auto; padding-inline: 1.25rem; @media (min-width: 64rem) { padding-inline: 2rem; } }
 @keyframes marquee { to { transform: translateX(-50%); } }
 @utility marquee-track { display: flex; width: max-content; animation: marquee 35s linear infinite; }
+@utility accent-green { color: oklch(0.72 0.17 150); }
 @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } .marquee-track { animation: none; } *, *::before, *::after { transition-duration: .01ms !important; } }
