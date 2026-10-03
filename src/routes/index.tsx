@@ -279,7 +279,8 @@ function Home() {
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
             {cities.map((city, i) => (
               <Link
-                to="/contact"
+                to="/vape-in/$city"
+                params={{ city: city.slug }}
                 key={city.slug}
                 className={`group border p-7 min-h-[190px] flex flex-col justify-between transition-colors hover:border-primary ${i === 0 ? "border-primary bg-accent" : "border-border bg-card"}`}
               >
