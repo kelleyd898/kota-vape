@@ -9,12 +9,12 @@ import { categories } from "@/data/categories";
 import { cities } from "@/data/cities";
 import { contact } from "@/config/contact";
 import heroImage from "@/assets/hero-vape.jpg";
-import imageOnRequest from "@/assets/image-on-request.webp.asset.json";
-import elfImage from "@/assets/categories/elf.webp.asset.json";
-import uwellImage from "@/assets/categories/uwell.webp.asset.json";
-import saltImage from "@/assets/categories/Pod-salt.webp.asset.json";
-import igetImage from "@/assets/categories/iget.webp.asset.json";
-const homeCategoryImages = [elfImage.url, uwellImage.url, saltImage.url, igetImage.url];
+import imageOnRequest from "@/assets/image-on-request.webp";
+import elfImage from "@/assets/categories/elf.webp";
+import uwellImage from "@/assets/categories/uwell.webp";
+import saltImage from "@/assets/categories/Pod-salt.webp";
+import igetImage from "@/assets/categories/iget.webp";
+const homeCategoryImages = [elfImage, uwellImage, saltImage, igetImage];
 // Landing page shows only these 4 brands; all 8 stay in the catalog/menu.
 const homeCategorySlugs = ["elf-bar", "uwell", "pod-salt", "iget"];
 const homeCategories = homeCategorySlugs.map((slug) => categories.find((c) => c.slug === slug)!).filter(Boolean);
@@ -221,7 +221,7 @@ function Home() {
         <div className="flex items-center justify-center p-10 md:p-14">
           <div className="relative">
             <img
-              src={imageOnRequest.url}
+              src={imageOnRequest}
               alt="Image available on request"
               loading="lazy"
               className="w-56 h-56 md:w-72 md:h-72 object-contain rounded-lg border border-border bg-background p-2"
