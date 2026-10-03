@@ -14,3 +14,4 @@
 - Keep shop products in category-specific modules and replacement pods in an independent collection; aggregate through the product service so views share one interface and related items stay category-scoped.
 - Model a product's previous price as optional catalog data and render it only when supplied, so sale pricing stays consistent across cards and details.
 - Build product WhatsApp links from the current page origin and the centrally configured business number; never embed a guessed domain or number.
+- Drive the city dropdown, home city tiles, and city catalog pages from the shared city data module so city names and destinations remain consistent.
