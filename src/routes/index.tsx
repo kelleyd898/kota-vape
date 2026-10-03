@@ -3,7 +3,6 @@ import {
   ArrowRight,
   ArrowUpRight,
   BadgeCheck,
-  Headphones,
   MapPin,
   ShieldCheck,
   Sparkles,
@@ -16,6 +15,7 @@ import { products } from "@/data/products";
 import { replacementPods } from "@/data/catalog/replacementPods";
 import { categories } from "@/data/categories";
 import { cities } from "@/data/cities";
+import { contact } from "@/config/contact";
 import heroImage from "@/assets/hero-vape.jpg";
 import elfImage from "@/assets/categories/elf.webp.asset.json";
 import uwellImage from "@/assets/categories/uwell.webp.asset.json";
@@ -54,24 +54,9 @@ export const Route = createFileRoute("/")({
   }),
   component: Home,
 });
-const features = [
-  { title: "Local perspective", text: "Rooted in Kota, with a focus on clear and useful local support.", Icon: MapPin },
-  {
-    title: "Authenticity first",
-    text: "A considered approach to product details and source verification.",
-    Icon: ShieldCheck,
-  },
-  {
-    title: "Human support",
-    text: "Helpful answers to general questions about products and formats.",
-    Icon: Headphones,
-  },
-  {
-    title: "Curated selection",
-    text: "A focused look at devices, pods, and brands worth researching.",
-    Icon: Sparkles,
-  },
-];
+const spotlightWhatsAppUrl = contact.whatsapp
+  ? `https://wa.me/${contact.whatsapp.replace(/\D/g, "")}?text=${encodeURIComponent("Hi, I read the Spotlight Review for the LUXE Q2 SE. Can you share availability?")}`
+  : null;
 const reasons = [
   {
     title: "Strict authenticity",
@@ -153,22 +138,8 @@ function Home() {
           ))}
         </div>
       </div>
-      <section className="border-b border-border bg-surface">
-        <div className="page-container grid grid-cols-2 lg:grid-cols-4">
-          {features.map(({ title, text, Icon }) => (
-            <div
-              key={title}
-              className="px-4 md:px-7 py-9 border-r border-b lg:border-b-0 border-border last:border-r-0"
-            >
-              <Icon size={24} strokeWidth={1.4} className="text-primary mb-5" />
-              <h3 className="font-display text-xl sm:text-2xl font-semibold">{title}</h3>
-              <p className="text-muted-foreground text-xs sm:text-sm leading-6 mt-2">{text}</p>
-            </div>
-          ))}
-        </div>
-      </section>
       <section className="py-10 md:py-16 page-container">
-        <SectionHeading kicker="The edit" title="Categories" link="/categories" />
+        <div className="[&_h2]:text-primary"><SectionHeading title="Categories" link="/categories" /></div>
         <div className="grid grid-cols-2 md:grid-cols-4 gap-3 md:gap-5">
           {homeCategories.map((category, i) => (
             <Link
@@ -198,7 +169,7 @@ function Home() {
       </section>
       <section className="py-10 md:py-16 bg-surface">
         <div className="page-container">
-          <SectionHeading kicker="The collection" title="Trending Now" link="/shop" />
+          <div className="[&_h2]:text-primary"><SectionHeading title="Trending Now" link="/shop" /></div>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-3 md:gap-5">
             {trendingProducts.map((p) => (
               <ProductCard key={p.id} product={p} />
@@ -207,7 +178,7 @@ function Home() {
         </div>
       </section>
       <section className="py-10 md:py-16 page-container">
-        <SectionHeading title="Best Sellers" link="/shop" />
+        <div className="[&_h2]:text-primary"><SectionHeading title="Best Sellers" link="/shop" /></div>
         <div className="grid grid-cols-2 md:grid-cols-4 gap-3 md:gap-5">
           {bestSellerProducts.map((p) => (
             <ProductCard key={p.id} product={p} />
@@ -217,21 +188,7 @@ function Home() {
       <section className="bg-surface py-10 md:py-16">
         <div className="page-container grid lg:grid-cols-[.8fr_1.2fr] gap-10 lg:gap-24">
           <div>
-            <p className="eyebrow">Answers, simply</p>
-            <h2 className="section-title">
-              A little more
-              <br />
-              <span className="text-primary">clarity.</span>
-            </h2>
-            <p className="mt-5 text-muted-foreground leading-7 max-w-sm">
-              Straight answers to common questions about our catalog and how we approach product information.
-            </p>
-            <Link
-              to="/faq"
-              className="inline-flex mt-7 gap-2 items-center text-xs text-primary uppercase tracking-widest"
-            >
-              All FAQs <ArrowUpRight size={16} />
-            </Link>
+            <h2 className="section-title text-primary">Frequently Asked Questions</h2>
           </div>
           <div className="border-t border-border">
             {[
@@ -273,18 +230,16 @@ function Home() {
           />
         </div>
         <div className="px-6 py-10 md:py-14 md:px-16 lg:px-20 flex flex-col justify-center">
-          <p className="eyebrow">Featured review / The journal</p>
-          <h2 className="font-display text-4xl md:text-6xl leading-none font-semibold max-w-lg">
-            The details behind a better-informed choice.
+          <h2 className="font-display text-4xl md:text-6xl leading-none font-semibold max-w-lg text-primary">
+            Module Spotlight: Vaporesso LUXE Q2 SE Analysis
           </h2>
           <p className="text-muted-foreground leading-7 mt-6 max-w-lg">
-            From material finish to everyday form, we look beyond first impressions to understand what makes a product
-            worth exploring.
+            When evaluating high-end gear, build quality and chipset reliability are crucial. In our recent deep-dive—inspired by the hardware teardowns seen on popular vape shop jaipur tech forums—we analyzed the LUXE Q2 SE. This module features advanced airflow dynamics and a highly efficient battery retention system, making it a top recommendation for our Hyderabad clients who demand durability and performance without compromise.
           </p>
-          <Button asChild variant="outline" className="mt-8 w-fit bg-transparent uppercase tracking-widest text-xs">
-            <Link to="/about">
-              Read more <ArrowRight />
-            </Link>
+          <Button asChild className="mt-8 w-fit uppercase tracking-widest text-xs">
+            <a href={spotlightWhatsAppUrl ?? "/contact"} target={spotlightWhatsAppUrl ? "_blank" : undefined} rel={spotlightWhatsAppUrl ? "noopener noreferrer" : undefined}>
+              Discuss the Module <ArrowRight />
+            </a>
           </Button>
         </div>
       </section>
