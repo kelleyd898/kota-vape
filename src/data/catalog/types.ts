@@ -1,4 +1,4 @@
-export type CategoryName = 'Elf Bar' | 'Uwell' | 'Pod Salt' | 'Iget';
+export type CategoryName = 'Elf Bar' | 'Uwell' | 'Pod Salt' | 'Iget' | 'Replacement Pods';
 export type Product = {
   id: number;
   slug: string;
