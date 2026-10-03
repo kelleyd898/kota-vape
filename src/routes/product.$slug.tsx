@@ -1,6 +1,7 @@
 import { createFileRoute, Link, notFound } from '@tanstack/react-router';
 import { useState, useEffect } from 'react';
 import { CheckCircle2, ChevronRight, MessageCircle, Star } from 'lucide-react';
+import { AllIndiaStrip } from '@/components/site/AllIndiaStrip';
 import { ProductCard } from '@/components/site/ProductCard';
 import { Button } from '@/components/ui/button';
 import { getProductBySlug, getRelatedProducts } from '@/services/productService';
@@ -36,7 +37,7 @@ function ProductDetail() {
       <div className="min-w-0">
         <h1 className="font-display text-3xl sm:text-4xl md:text-5xl font-semibold leading-tight text-primary break-words">{product.name}</h1>
         <p className="accent-green text-2xl sm:text-3xl font-semibold mt-5">{price}</p>
-        <div className="mt-6 max-w-sm">{whatsappUrl ? <Button asChild size="lg" className="w-full"><a href={whatsappUrl} target="_blank" rel="noopener noreferrer"><MessageCircle size={18}/> Get on WhatsApp</a></Button> : <Button asChild size="lg" variant="outline" className="w-full"><Link to="/contact"><MessageCircle size={18}/> Contact for details</Link></Button>}</div>{!contact.whatsapp && <p className="mt-3 text-xs text-muted-foreground">WhatsApp enquiries will be available once the business number is confirmed.</p>}
+        <div className="mt-6 max-w-sm">{whatsappUrl ? <Button asChild size="lg" className="w-full"><a href={whatsappUrl} target="_blank" rel="noopener noreferrer"><MessageCircle size={18}/> Get on WhatsApp</a></Button> : <Button asChild size="lg" variant="outline" className="w-full"><Link to="/contact"><MessageCircle size={18}/> Contact for details</Link></Button>}</div><AllIndiaStrip className="mt-5" />{!contact.whatsapp && <p className="mt-3 text-xs text-muted-foreground">WhatsApp enquiries will be available once the business number is confirmed.</p>}
         <div className="mt-6 space-y-2 text-sm"><p><span className="font-semibold">SKU:</span> {product.sku ?? 'On inquiry'}</p><p><span className="font-semibold uppercase">Category:</span> <Link to="/shop" search={{ q: '', category: product.category }} className="hover:text-primary">{product.category}</Link></p></div>
         <div className="mt-7 border border-dashed border-border px-5 sm:px-8 py-5 text-center max-w-md"><p className="text-xs sm:text-sm font-semibold tracking-wide">Guaranteed Safe Checkout</p><img src={paymentStrip} alt="Mastercard, Visa, Amex and Discover" className="mt-4 mx-auto w-full max-w-[300px] h-auto"/></div>
         <div className="mt-8 max-w-md"><p className="text-sm font-semibold mb-4">Extra Features</p><ul className="space-y-3 text-sm">{extraFeatures.map(feature => <li key={feature} className="flex items-center gap-2.5"><CheckCircle2 size={18} className="accent-green shrink-0"/><span>{feature}</span></li>)}</ul></div>
