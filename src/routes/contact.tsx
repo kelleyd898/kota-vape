@@ -19,7 +19,7 @@ export const Route = createFileRoute('/contact')({
   head: () => ({
     meta: [
       { title: 'Contact Us | KOTA VAPE SHOP' },
-      { name: 'description', content: 'Contact Vape Shop Jaipur — email and WhatsApp support, support hours, delivery areas, and wholesale inquiries.' },
+      { name: 'description', content: 'Contact KOTA VAPE SHOP — email and WhatsApp support, support hours, delivery areas, and wholesale inquiries.' },
       { property: 'og:title', content: 'Contact Us | KOTA VAPE SHOP' },
       { property: 'og:description', content: 'Questions about products, orders, or wholesale? Reach our support team by email or WhatsApp.' },
       { property: 'og:type', content: 'website' },
@@ -35,7 +35,7 @@ function Contact() {
       <p className="eyebrow">Contact us</p>
       <h1 className="font-display text-5xl md:text-7xl font-semibold text-primary leading-tight">Contact KOTA VAPE SHOP</h1>
       <p className="max-w-none md:max-w-5xl lg:max-w-none mt-8 text-muted-foreground leading-8">
-        Welcome to the Contact Us page of Vape Shop Jaipur. Whether you have a question about our premium vaping products, need assistance with an ongoing order, require advice on choosing the right e-liquid, or want to discuss bulk wholesale opportunities, our dedicated support team is here to help. We prioritize customer satisfaction and aim to provide prompt, helpful, and professional responses to all your inquiries.
+        Welcome to the Contact Us page of KOTA VAPE SHOP. Whether you have a question about our premium vaping products, need assistance with an ongoing order, require advice on choosing the right e-liquid, or want to discuss bulk wholesale opportunities, our dedicated support team is here to help. We prioritize customer satisfaction and aim to provide prompt, helpful, and professional responses to all your inquiries.
       </p>
 
       <div className="border-t border-border mt-12 pt-10 max-w-2xl">
@@ -49,7 +49,7 @@ function Contact() {
         </ol>
       </div>
 
-      <p className="sr-only">Contact Vape Shop Jaipur Support Customer Service Delivery Areas</p>
+      <p className="sr-only">Contact KOTA VAPE SHOP Support Customer Service Delivery Areas</p>
 
       <div className="mt-14 space-y-16 max-w-none">
         <section id="get-in-touch" className="scroll-mt-28">
