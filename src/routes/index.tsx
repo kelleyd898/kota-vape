@@ -8,11 +8,11 @@ import { categories } from '@/data/categories';
 import { cities } from '@/data/cities';
 import { serviceAreas } from '@/data/serviceAreas';
 import heroImage from '@/assets/hero-vape.jpg';
-import elfImage from '@/assets/product-disposable.jpg';
-import uwellImage from '@/assets/product-pods.jpg';
-import saltImage from '@/assets/product-bottle.jpg';
-import igetImage from '@/assets/product-kit.jpg';
-const homeCategoryImages = [elfImage, uwellImage, saltImage, igetImage];
+import elfImage from '@/assets/categories/elf.webp.asset.json';
+import uwellImage from '@/assets/categories/uwell.webp.asset.json';
+import saltImage from '@/assets/categories/Pod-salt.webp.asset.json';
+import igetImage from '@/assets/categories/iget.webp.asset.json';
+const homeCategoryImages = [elfImage.url, uwellImage.url, saltImage.url, igetImage.url];
 
 export const Route = createFileRoute('/')({
   head: () => ({ meta: [{ title: 'KOTA VAPE SHOP | Premium Product Information in Kota' }, { name: 'description', content: 'Explore adult-focused device and pod information, brand guides, and local support from KOTA VAPE SHOP.' }, { property: 'og:title', content: 'KOTA VAPE SHOP | Premium Product Information in Kota' }, { property: 'og:description', content: 'A curated informational catalog and product research resource based in Kota.' }, { property: 'og:type', content: 'website' }, { name: 'twitter:card', content: 'summary_large_image' }] }),
