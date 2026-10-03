@@ -17,6 +17,7 @@ import { categories } from "@/data/categories";
 import { cities } from "@/data/cities";
 import { contact } from "@/config/contact";
 import heroImage from "@/assets/hero-vape.jpg";
+import imageOnRequest from "@/assets/image-on-request.webp.asset.json";
 import elfImage from "@/assets/categories/elf.webp.asset.json";
 import uwellImage from "@/assets/categories/uwell.webp.asset.json";
 import saltImage from "@/assets/categories/Pod-salt.webp.asset.json";
@@ -221,12 +222,12 @@ function Home() {
         </div>
       </section>
       <section className="grid lg:grid-cols-2 min-h-[480px] bg-secondary">
-        <div className="overflow-hidden">
+        <div className="flex items-center justify-center p-10 md:p-14">
           <img
-            src={heroImage}
-            alt="Editorial studio view of a pod device"
+            src={imageOnRequest.url}
+            alt="Image available on request"
             loading="lazy"
-            className="w-full h-full min-h-[350px] object-cover object-right"
+            className="w-40 h-40 md:w-52 md:h-52 object-contain rounded-lg border border-border bg-background p-2"
           />
         </div>
         <div className="px-6 py-10 md:py-14 md:px-16 lg:px-20 flex flex-col justify-center">
