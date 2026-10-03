@@ -118,6 +118,7 @@ function Home() {
                 <Link to="/about">Our approach</Link>
               </Button>
             </div>
+            <AllIndiaStrip className="mt-6 md:mt-7" />
           </div>
         </div>
       </section>
