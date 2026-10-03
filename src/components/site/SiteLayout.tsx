@@ -11,6 +11,15 @@ import { cities } from '@/data/cities';
 import { contact } from '@/config/contact';
 import logoImage from '@/assets/logo.png';
 
+const seoKeywords = [
+  'Trending: Vape Shop Kota',
+  'Best Vape Shop in Kota',
+  'Premium Vape Store Kota',
+  'Authentic Vape Shop Kota',
+  'Top Rated Vape Store Kota',
+  'Vape Shop Near Me Kota',
+];
+
 export function SiteLayout({ children }: { children: React.ReactNode }) {
   const [menuOpen, setMenuOpen] = useState(false);
   const [searchOpen, setSearchOpen] = useState(false);
