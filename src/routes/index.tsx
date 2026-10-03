@@ -168,12 +168,7 @@ function Home() {
         </div>
       </section>
       <section className="py-10 md:py-16 page-container">
-        <SectionHeading
-          kicker="The brands"
-          title="Explore by brand"
-          description="Looking for a vape shop in Kota? Explore distinct names and formats in our research catalog."
-          link="/categories"
-        />
+        <SectionHeading kicker="The edit" title="Categories" link="/categories" />
         <div className="grid grid-cols-2 md:grid-cols-4 gap-3 md:gap-5">
           {homeCategories.map((category, i) => (
             <Link
