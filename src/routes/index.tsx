@@ -21,6 +21,11 @@ import uwellImage from "@/assets/categories/uwell.webp.asset.json";
 import saltImage from "@/assets/categories/Pod-salt.webp.asset.json";
 import igetImage from "@/assets/categories/iget.webp.asset.json";
 const homeCategoryImages = [elfImage.url, uwellImage.url, saltImage.url, igetImage.url];
+// Landing page shows only these 4 brands; all 8 stay in the catalog/menu.
+const homeCategorySlugs = ["elf-bar", "uwell", "pod-salt", "iget"];
+const homeCategories = homeCategorySlugs
+  .map((slug) => categories.find((c) => c.slug === slug)!)
+  .filter(Boolean);
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -163,7 +168,7 @@ function Home() {
           link="/categories"
         />
         <div className="grid grid-cols-2 md:grid-cols-4 gap-3 md:gap-5">
-          {categories.map((category, i) => (
+          {homeCategories.map((category, i) => (
             <Link
               key={category.slug}
               to="/shop"
