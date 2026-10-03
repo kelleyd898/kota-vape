@@ -60,6 +60,6 @@ function ProductDetail() {
         </div>
       </div>
     </section>
-    {related.length > 0 && <section className="mt-14 md:mt-20"><h2 className="font-display text-2xl md:text-3xl mb-6 md:mb-8">Related products</h2><div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3 md:gap-5">{related.map(item => <ProductCard key={item.id} product={item}/>)}</div></section>}
+    {related.length > 0 && <section className="mt-12 md:mt-16"><h2 className="font-display text-2xl md:text-3xl mb-6 md:mb-8">Related products</h2><div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3 md:gap-5">{related.slice(0, 4).map((item, i) => <ProductCard key={item.id} product={item} className={i === 2 ? 'hidden md:block' : i === 3 ? 'hidden lg:block' : ''}/>)}</div></section>}
   </div>;
 }
