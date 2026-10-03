@@ -1,5 +1,6 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { ArrowRight, ArrowUpRight, BadgeCheck, MapPin, ShieldCheck, Sparkles, SearchCheck } from "lucide-react";
+import { WhatsAppIcon } from "@/components/site/WhatsAppIcon";
 import { Button } from "@/components/ui/button";
 import { ProductCard } from "@/components/site/ProductCard";
 import { SectionHeading } from "@/components/site/SectionHeading";
@@ -105,7 +106,7 @@ function Home() {
                   target={heroWhatsAppUrl ? "_blank" : undefined}
                   rel={heroWhatsAppUrl ? "noopener noreferrer" : undefined}
                 >
-                  Order only on WhatsApp <ArrowRight />
+                  <WhatsAppIcon className="h-4 w-4" /> Order only on WhatsApp
                 </a>
               </Button>
               <Button
