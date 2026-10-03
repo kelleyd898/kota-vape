@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { Link } from '@tanstack/react-router';
 import { ArrowRight, ChevronDown, Menu, Search, X } from 'lucide-react';
 
@@ -18,15 +18,26 @@ const consultationUrl = contact.whatsapp
 export function SiteLayout({ children }: { children: React.ReactNode }) {
   const [menuOpen, setMenuOpen] = useState(false);
   const [searchOpen, setSearchOpen] = useState(false);
+  const [openDropdown, setOpenDropdown] = useState<'policy' | 'categories' | null>(null);
+
+  useEffect(() => {
+    if (!openDropdown) return;
+    const close = (event: MouseEvent) => {
+      const target = event.target as HTMLElement | null;
+      if (!target?.closest('[data-navbar-dropdown]')) setOpenDropdown(null);
+    };
+    document.addEventListener('click', close);
+    return () => document.removeEventListener('click', close);
+  }, [openDropdown]);
   return <div className="min-h-screen bg-background text-foreground">
     <header className="sticky top-0 z-50 border-b border-border bg-background/95 backdrop-blur-xl">
       <div className="mx-auto max-w-7xl px-5 lg:px-8 h-[92px] grid grid-cols-[minmax(0,1fr)_auto] xl:grid-cols-[auto_minmax(0,1fr)_auto] items-center gap-4">
         <Link to="/" className="min-w-0 leading-none group flex items-center" aria-label="Kota Vape Shop home"><img src={logoImage} alt="Kota Vape Shop logo" width={1024} height={1024} className="h-14 w-14 sm:h-16 sm:w-16 object-contain"/></Link>
         <nav aria-label="Main navigation" className="hidden xl:flex min-w-0 items-center justify-center gap-5 text-[11px] font-semibold uppercase tracking-[0.08em]">
           <Link to="/" className="text-muted-foreground hover:text-foreground">Home</Link><Link to="/about" className="text-muted-foreground hover:text-foreground">About us</Link><Link to="/contact" className="text-muted-foreground hover:text-foreground">Contact us</Link><Link to="/shop" search={{ q: '', category: '' }} className="text-muted-foreground hover:text-foreground">Shop</Link>
-          <div className="group relative"><Button variant="ghost" size="sm" className="uppercase text-xs">Policy <ChevronDown size={13}/></Button><div className="invisible opacity-0 group-hover:visible group-hover:opacity-100 group-focus-within:visible group-focus-within:opacity-100 absolute top-full left-0 min-w-52 bg-surface border border-border p-2 shadow-xl transition-all"><Link to="/shipping-policy" className="block px-3 py-2.5">Shipping Policy</Link><Link to="/refund-policy" className="block px-3 py-2.5">Refund and Returns Policy</Link><Link to="/privacy-policy" className="block px-3 py-2.5">Privacy Policy</Link></div></div>
+          <div className="relative" data-navbar-dropdown><Button variant="ghost" size="sm" className="uppercase text-xs" aria-expanded={openDropdown === 'policy'} onClick={() => setOpenDropdown(openDropdown === 'policy' ? null : 'policy')}>Policy <ChevronDown size={13}/></Button><div className={`absolute top-full left-0 min-w-52 bg-surface border border-border p-2 shadow-xl transition-all ${openDropdown === 'policy' ? 'visible opacity-100' : 'invisible opacity-0'}`}><Link to="/shipping-policy" onClick={() => setOpenDropdown(null)} className="block px-3 py-2.5">Shipping Policy</Link><Link to="/refund-policy" onClick={() => setOpenDropdown(null)} className="block px-3 py-2.5">Refund and Returns Policy</Link><Link to="/privacy-policy" onClick={() => setOpenDropdown(null)} className="block px-3 py-2.5">Privacy Policy</Link></div></div>
           <Link to="/replacement-pods" className="text-muted-foreground hover:text-foreground whitespace-nowrap">Replacement pods</Link>
-          <div className="group relative"><Button variant="ghost" size="sm" className="uppercase text-xs">Categories <ChevronDown size={13}/></Button><div className="invisible opacity-0 group-hover:visible group-hover:opacity-100 group-focus-within:visible group-focus-within:opacity-100 absolute top-full right-0 min-w-44 bg-surface border border-border p-2 shadow-xl transition-all">{categories.map(category => <Link key={category.slug} to="/shop" search={{ q: '', category: category.name }} className="block px-3 py-2.5 hover:text-primary">{category.name}</Link>)}</div></div>
+          <div className="relative" data-navbar-dropdown><Button variant="ghost" size="sm" className="uppercase text-xs" aria-expanded={openDropdown === 'categories'} onClick={() => setOpenDropdown(openDropdown === 'categories' ? null : 'categories')}>Categories <ChevronDown size={13}/></Button><div className={`absolute top-full right-0 min-w-44 bg-surface border border-border p-2 shadow-xl transition-all ${openDropdown === 'categories' ? 'visible opacity-100' : 'invisible opacity-0'}`}>{categories.map(category => <Link key={category.slug} to="/shop" search={{ q: '', category: category.name }} onClick={() => setOpenDropdown(null)} className="block px-3 py-2.5 hover:text-primary">{category.name}</Link>)}</div></div>
         </nav>
         <div className="flex shrink-0 items-center gap-1 sm:gap-3"><Button variant="ghost" size="icon" aria-label="Search catalog" onClick={() => setSearchOpen(!searchOpen)}><Search size={19}/></Button><Button variant="ghost" size="icon" className="xl:hidden" aria-label={menuOpen ? 'Close menu' : 'Open menu'} onClick={() => setMenuOpen(!menuOpen)}>{menuOpen ? <X size={21}/> : <Menu size={21}/>}</Button></div>
       </div>
