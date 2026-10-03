@@ -11,3 +11,5 @@
 
 - Keep catalog, category, city, service-area, and contact content in dedicated data/config modules so the presentational routes can later use a data API without a UI rewrite.
 - Treat the current catalog entries as illustrative research references, not verified listings; do not infer prices, availability, or contact details.
+- Keep shop products in category-specific modules and replacement pods in an independent collection; aggregate through the product service so views share one interface and related items stay category-scoped.
+- Build product WhatsApp links from the current page origin and the centrally configured business number; never embed a guessed domain or number.
