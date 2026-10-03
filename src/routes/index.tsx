@@ -1,13 +1,5 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import {
-  ArrowRight,
-  ArrowUpRight,
-  BadgeCheck,
-  MapPin,
-  ShieldCheck,
-  Sparkles,
-  SearchCheck,
-} from "lucide-react";
+import { ArrowRight, ArrowUpRight, BadgeCheck, MapPin, ShieldCheck, Sparkles, SearchCheck } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { ProductCard } from "@/components/site/ProductCard";
 import { SectionHeading } from "@/components/site/SectionHeading";
@@ -25,9 +17,7 @@ import igetImage from "@/assets/categories/iget.webp.asset.json";
 const homeCategoryImages = [elfImage.url, uwellImage.url, saltImage.url, igetImage.url];
 // Landing page shows only these 4 brands; all 8 stay in the catalog/menu.
 const homeCategorySlugs = ["elf-bar", "uwell", "pod-salt", "iget"];
-const homeCategories = homeCategorySlugs
-  .map((slug) => categories.find((c) => c.slug === slug)!)
-  .filter(Boolean);
+const homeCategories = homeCategorySlugs.map((slug) => categories.find((c) => c.slug === slug)!).filter(Boolean);
 const allProducts = [...products, ...replacementPods];
 const trendingProducts = allProducts.slice(0, 8);
 const bestSellerProducts = [
@@ -140,7 +130,9 @@ function Home() {
         </div>
       </div>
       <section className="py-10 md:py-16 page-container">
-        <div className="[&_h2]:text-primary"><SectionHeading title="Categories" link="/categories" /></div>
+        <div className="[&_h2]:text-primary">
+          <SectionHeading title="Categories" link="/categories" />
+        </div>
         <div className="grid grid-cols-2 md:grid-cols-4 gap-3 md:gap-5">
           {homeCategories.map((category, i) => (
             <Link
@@ -170,7 +162,9 @@ function Home() {
       </section>
       <section className="py-10 md:py-16 bg-surface">
         <div className="page-container">
-          <div className="[&_h2]:text-primary"><SectionHeading title="Trending Now" link="/shop" /></div>
+          <div className="[&_h2]:text-primary">
+            <SectionHeading title="Trending Now" link="/shop" />
+          </div>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-3 md:gap-5">
             {trendingProducts.map((p) => (
               <ProductCard key={p.id} product={p} />
@@ -179,7 +173,9 @@ function Home() {
         </div>
       </section>
       <section className="py-10 md:py-16 page-container">
-        <div className="[&_h2]:text-primary"><SectionHeading title="Best Sellers" link="/shop" /></div>
+        <div className="[&_h2]:text-primary">
+          <SectionHeading title="Best Sellers" link="/shop" />
+        </div>
         <div className="grid grid-cols-2 md:grid-cols-4 gap-3 md:gap-5">
           {bestSellerProducts.map((p) => (
             <ProductCard key={p.id} product={p} />
@@ -238,17 +234,25 @@ function Home() {
             Module Spotlight: Vaporesso LUXE Q2 SE Analysis
           </h2>
           <p className="text-muted-foreground leading-7 mt-6 max-w-lg">
-            When evaluating high-end gear, build quality and chipset reliability are crucial. In our recent deep-dive—inspired by the hardware teardowns seen on popular vape shop jaipur tech forums—we analyzed the LUXE Q2 SE. This module features advanced airflow dynamics and a highly efficient battery retention system, making it a top recommendation for our Hyderabad clients who demand durability and performance without compromise.
+            When evaluating high-end gear, build quality and chipset reliability are crucial. In our recent
+            deep-dive—inspired by the hardware teardowns seen on popular vape shop jaipur tech forums—we analyzed the
+            LUXE Q2 SE. This module features advanced airflow dynamics and a highly efficient battery retention system,
+            making it a top recommendation for our Hyderabad clients who demand durability and performance without
+            compromise.
           </p>
           <Button asChild className="mt-8 w-fit uppercase tracking-widest text-xs">
-            <a href={spotlightWhatsAppUrl ?? "/contact"} target={spotlightWhatsAppUrl ? "_blank" : undefined} rel={spotlightWhatsAppUrl ? "noopener noreferrer" : undefined}>
+            <a
+              href={spotlightWhatsAppUrl ?? "/contact"}
+              target={spotlightWhatsAppUrl ? "_blank" : undefined}
+              rel={spotlightWhatsAppUrl ? "noopener noreferrer" : undefined}
+            >
               Discuss the Module <ArrowRight />
             </a>
           </Button>
         </div>
       </section>
       <section className="py-10 md:py-16 page-container">
-        <SectionHeading kicker="Our principles" title="Why choose Kota Vape Shop" />
+        <SectionHeading kicker="Our principles" title="Why Choose Our Gear?" />
         <div className="grid grid-cols-2 lg:grid-cols-4 gap-3 md:gap-5">
           {reasons.map(({ title, text, Icon }) => (
             <div key={title} className="border border-border bg-card p-5 md:p-7 min-h-[220px]">
@@ -262,9 +266,8 @@ function Home() {
       <section className="bg-surface py-10 md:py-16">
         <div className="page-container">
           <SectionHeading
-            kicker="Where we're rooted"
-            title="Explore by city"
-            description="Kota is home. Our informational content is also accessible to readers across Rajasthan."
+            title="Shop by City"
+            description="Select your city for fast, local delivery and 100% authentic vaping supplies."
           />
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
             {cities.map((city, i) => (
