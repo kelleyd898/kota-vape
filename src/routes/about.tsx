@@ -29,7 +29,7 @@ function About() {
   return (
     <div className="page-container py-10 md:py-16">
       <p className="eyebrow">About us</p>
-      <h1 className="font-display text-5xl md:text-7xl font-semibold text-primary leading-tight max-w-4xl">About Vape Shop Jaipur: Your Local Premium Vape Store</h1>
+      <h1 className="font-display text-5xl md:text-7xl font-semibold text-primary leading-tight max-w-4xl">About KOTA VAPE SHOP: Your Local Premium Vape Store</h1>
       <p className="max-w-none md:max-w-5xl lg:max-w-none mt-8 text-muted-foreground leading-8">
         Welcome to Vape Shop Jaipur, your ultimate local destination for premium, authentic, and high-quality vaping products. We are more than just an e-commerce store; we are a dedicated community of vaping enthusiasts committed to providing the finest products, exceptional customer service, and a seamless shopping experience for adult vapers across Jaipur and beyond.
       </p>

@@ -33,7 +33,7 @@ function Contact() {
   return (
     <div className="page-container py-10 md:py-16">
       <p className="eyebrow">Contact us</p>
-      <h1 className="font-display text-5xl md:text-7xl font-semibold text-primary leading-tight">Contact Vape Shop Jaipur</h1>
+      <h1 className="font-display text-5xl md:text-7xl font-semibold text-primary leading-tight">Contact KOTA VAPE SHOP</h1>
       <p className="max-w-none md:max-w-5xl lg:max-w-none mt-8 text-muted-foreground leading-8">
         Welcome to the Contact Us page of Vape Shop Jaipur. Whether you have a question about our premium vaping products, need assistance with an ongoing order, require advice on choosing the right e-liquid, or want to discuss bulk wholesale opportunities, our dedicated support team is here to help. We prioritize customer satisfaction and aim to provide prompt, helpful, and professional responses to all your inquiries.
       </p>
