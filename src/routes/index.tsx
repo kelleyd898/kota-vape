@@ -207,19 +207,11 @@ function Home() {
         </div>
       </section>
       <section className="py-10 md:py-16 page-container">
-        <SectionHeading
-          kicker="The collection"
-          title="Best sellers"
-          description="Popular catalog entries to compare and research."
-          link="/shop"
-        />
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3 md:gap-5">
-          {products
-            .filter((p) => p.bestseller)
-            .slice(0, 4)
-            .map((p) => (
-              <ProductCard key={p.id} product={p} />
-            ))}
+        <SectionHeading title="Best Sellers" link="/shop" />
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-3 md:gap-5">
+          {bestSellerProducts.map((p) => (
+            <ProductCard key={p.id} product={p} />
+          ))}
         </div>
       </section>
       <section className="bg-surface py-10 md:py-16">
