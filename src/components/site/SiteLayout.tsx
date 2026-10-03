@@ -18,6 +18,17 @@ const consultationUrl = contact.whatsapp
 export function SiteLayout({ children }: { children: React.ReactNode }) {
   const [menuOpen, setMenuOpen] = useState(false);
   const [searchOpen, setSearchOpen] = useState(false);
+  const [openDropdown, setOpenDropdown] = useState<'policy' | 'categories' | null>(null);
+
+  useEffect(() => {
+    if (!openDropdown) return;
+    const close = (event: MouseEvent) => {
+      const target = event.target as HTMLElement | null;
+      if (!target?.closest('[data-navbar-dropdown]')) setOpenDropdown(null);
+    };
+    document.addEventListener('click', close);
+    return () => document.removeEventListener('click', close);
+  }, [openDropdown]);
   return <div className="min-h-screen bg-background text-foreground">
     <header className="sticky top-0 z-50 border-b border-border bg-background/95 backdrop-blur-xl">
       <div className="mx-auto max-w-7xl px-5 lg:px-8 h-[92px] grid grid-cols-[minmax(0,1fr)_auto] xl:grid-cols-[auto_minmax(0,1fr)_auto] items-center gap-4">
