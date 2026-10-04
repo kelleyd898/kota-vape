@@ -1,20 +1,165 @@
-import iceKingBlueberryIce from '@/assets/products/417.webp';
-import iceKingBlackberryCranberry from '@/assets/products/419.webp';
-import imageOnRequest from '@/assets/image-on-request.webp';
-import type { Product } from './types';
-const iceKingRelated = ['elf-bar-ice-king-blueberry-ice-30k', 'elf-bar-ice-king-blackberry-cranberry-30k'];
+import iceKingBlueberryIce from "@/assets/products/417.webp";
+import iceKingBlackberryCranberry from "@/assets/products/419.webp";
+import p416 from "@/assets/products/416.webp";
+import p415 from "@/assets/products/415.webp";
+import p414 from "@/assets/products/414.webp";
+import p663 from "@/assets/products/663.webp";
+import p412 from "@/assets/products/412.webp";
+import p661 from "@/assets/products/661.webp";
+import p410 from "@/assets/products/410.webp";
+import p409 from "@/assets/products/409.webp";
+import p405 from "@/assets/products/405.webp";
+import p408 from "@/assets/products/408.webp";
+import p407 from "@/assets/products/407.webp";
+import type { Product } from "./types";
+const iceKingRelated = [
+  "elf-bar-ice-king-blueberry-ice-30k",
+  "elf-bar-ice-king-blackberry-cranberry-30k",
+];
 export const elfBarProducts: Product[] = [
-  { id: 9, slug: 'elf-bar-ice-king-blueberry-ice-30k', name: 'Elf Bar Ice King – Blueberry Ice – 30K', sku: '417', image: iceKingBlueberryIce, price: 2199, category: 'Elf Bar', bestseller: false, relatedProducts: ['elf-bar-ice-king-blackberry-cranberry-30k'] },
-  { id: 10, slug: 'elf-bar-ice-king-blackberry-cranberry-30k', name: 'Elf Bar Ice King – Blackberry Cranberry – 30K', sku: '419', image: iceKingBlackberryCranberry, price: 2199, category: 'Elf Bar', bestseller: false, relatedProducts: ['elf-bar-ice-king-blueberry-ice-30k'] },
-  { id: 13, slug: 'elf-bar-ice-king-blueberry-raspberry-watermelon-30k', name: 'Elf Bar Ice King – Blueberry Raspberry Watermelon – 30K', sku: '416', image: imageOnRequest, price: 2199, category: 'Elf Bar', bestseller: false, relatedProducts: iceKingRelated },
-  { id: 14, slug: 'elf-bar-ice-king-cola-ice-30k', name: 'Elf Bar Ice King – Cola Ice – 30K', sku: '415', image: imageOnRequest, price: 2199, category: 'Elf Bar', bestseller: false, relatedProducts: iceKingRelated },
-  { id: 15, slug: 'elf-bar-ice-king-grape-ice-30k', name: 'Elf Bar Ice King – Grape Ice – 30K', sku: '414', image: imageOnRequest, price: 2199, category: 'Elf Bar', bestseller: false, relatedProducts: iceKingRelated },
-  { id: 16, slug: 'elf-bar-ice-king-kiwi-passion-fruit-guava-30k', name: 'Elf Bar Ice King – Kiwi Passion Fruit Guava – 30K', sku: '663', image: imageOnRequest, price: 2199, category: 'Elf Bar', bestseller: false, relatedProducts: iceKingRelated },
-  { id: 17, slug: 'elf-bar-ice-king-passion-fruit-mango-ice-30k', name: 'Elf Bar Ice King – Passion Fruit Mango Ice – 30K', sku: '412', image: imageOnRequest, price: 2199, category: 'Elf Bar', bestseller: false, relatedProducts: iceKingRelated },
-  { id: 18, slug: 'elf-bar-ice-king-ribena-lychee-30k', name: 'Elf Bar Ice King – Ribena Lychee – 30K', sku: '661', image: imageOnRequest, price: 2199, category: 'Elf Bar', bestseller: false, relatedProducts: iceKingRelated },
-  { id: 19, slug: 'elf-bar-ice-king-strawberry-watermelon-30k', name: 'Elf Bar Ice King – Strawberry Watermelon – 30K', sku: '410', image: imageOnRequest, price: 2199, category: 'Elf Bar', bestseller: false, relatedProducts: iceKingRelated },
-  { id: 20, slug: 'elf-bar-ice-king-watermelon-ice-30k', name: 'Elf Bar Ice King – Watermelon Ice – 30K', sku: '409', image: imageOnRequest, price: 2199, category: 'Elf Bar', bestseller: false, relatedProducts: iceKingRelated },
-  { id: 21, slug: 'elf-bar-moon-night-blueberry-raspberry-watermelon', name: 'Elf Bar Moon Night – Blueberry Raspberry Watermelon', sku: '405', image: imageOnRequest, price: 3099, category: 'Elf Bar', bestseller: true, relatedProducts: iceKingRelated },
-  { id: 22, slug: 'elf-bar-moon-night-40k-blackberry-ice', name: 'Elf Bar Moon Night 40K – Blackberry Ice', sku: '408', image: imageOnRequest, price: 2999, category: 'Elf Bar', bestseller: false, trending: true, relatedProducts: iceKingRelated },
-  { id: 23, slug: 'elf-bar-moon-night-40k-peach-ice', name: 'Elf Bar Moon Night 40K – Peach Ice', sku: '407', image: imageOnRequest, price: 2999, category: 'Elf Bar', bestseller: false, trending: true, relatedProducts: iceKingRelated },
+  {
+    id: 9,
+    slug: "elf-bar-ice-king-blueberry-ice-30k",
+    name: "Elf Bar Ice King – Blueberry Ice – 30K",
+    sku: "417",
+    image: iceKingBlueberryIce,
+    price: 2199,
+    category: "Elf Bar",
+    bestseller: false,
+    relatedProducts: ["elf-bar-ice-king-blackberry-cranberry-30k"],
+  },
+  {
+    id: 10,
+    slug: "elf-bar-ice-king-blackberry-cranberry-30k",
+    name: "Elf Bar Ice King – Blackberry Cranberry – 30K",
+    sku: "419",
+    image: iceKingBlackberryCranberry,
+    price: 2199,
+    category: "Elf Bar",
+    bestseller: false,
+    relatedProducts: ["elf-bar-ice-king-blueberry-ice-30k"],
+  },
+  {
+    id: 13,
+    slug: "elf-bar-ice-king-blueberry-raspberry-watermelon-30k",
+    name: "Elf Bar Ice King – Blueberry Raspberry Watermelon – 30K",
+    sku: "416",
+    image: p416,
+    price: 2199,
+    category: "Elf Bar",
+    bestseller: false,
+    relatedProducts: iceKingRelated,
+  },
+  {
+    id: 14,
+    slug: "elf-bar-ice-king-cola-ice-30k",
+    name: "Elf Bar Ice King – Cola Ice – 30K",
+    sku: "415",
+    image: p415,
+    price: 2199,
+    category: "Elf Bar",
+    bestseller: false,
+    relatedProducts: iceKingRelated,
+  },
+  {
+    id: 15,
+    slug: "elf-bar-ice-king-grape-ice-30k",
+    name: "Elf Bar Ice King – Grape Ice – 30K",
+    sku: "414",
+    image: p414,
+    price: 2199,
+    category: "Elf Bar",
+    bestseller: false,
+    relatedProducts: iceKingRelated,
+  },
+  {
+    id: 16,
+    slug: "elf-bar-ice-king-kiwi-passion-fruit-guava-30k",
+    name: "Elf Bar Ice King – Kiwi Passion Fruit Guava – 30K",
+    sku: "663",
+    image: p663,
+    price: 2199,
+    category: "Elf Bar",
+    bestseller: false,
+    relatedProducts: iceKingRelated,
+  },
+  {
+    id: 17,
+    slug: "elf-bar-ice-king-passion-fruit-mango-ice-30k",
+    name: "Elf Bar Ice King – Passion Fruit Mango Ice – 30K",
+    sku: "412",
+    image: p412,
+    price: 2199,
+    category: "Elf Bar",
+    bestseller: false,
+    relatedProducts: iceKingRelated,
+  },
+  {
+    id: 18,
+    slug: "elf-bar-ice-king-ribena-lychee-30k",
+    name: "Elf Bar Ice King – Ribena Lychee – 30K",
+    sku: "661",
+    image: p661,
+    price: 2199,
+    category: "Elf Bar",
+    bestseller: false,
+    relatedProducts: iceKingRelated,
+  },
+  {
+    id: 19,
+    slug: "elf-bar-ice-king-strawberry-watermelon-30k",
+    name: "Elf Bar Ice King – Strawberry Watermelon – 30K",
+    sku: "410",
+    image: p410,
+    price: 2199,
+    category: "Elf Bar",
+    bestseller: false,
+    relatedProducts: iceKingRelated,
+  },
+  {
+    id: 20,
+    slug: "elf-bar-ice-king-watermelon-ice-30k",
+    name: "Elf Bar Ice King – Watermelon Ice – 30K",
+    sku: "409",
+    image: p409,
+    price: 2199,
+    category: "Elf Bar",
+    bestseller: false,
+    relatedProducts: iceKingRelated,
+  },
+  {
+    id: 21,
+    slug: "elf-bar-moon-night-blueberry-raspberry-watermelon",
+    name: "Elf Bar Moon Night – Blueberry Raspberry Watermelon",
+    sku: "405",
+    image: p405,
+    price: 3099,
+    category: "Elf Bar",
+    bestseller: true,
+    relatedProducts: iceKingRelated,
+  },
+  {
+    id: 22,
+    slug: "elf-bar-moon-night-40k-blackberry-ice",
+    name: "Elf Bar Moon Night 40K – Blackberry Ice",
+    sku: "408",
+    image: p408,
+    price: 2999,
+    category: "Elf Bar",
+    bestseller: false,
+    trending: true,
+    relatedProducts: iceKingRelated,
+  },
+  {
+    id: 23,
+    slug: "elf-bar-moon-night-40k-peach-ice",
+    name: "Elf Bar Moon Night 40K – Peach Ice",
+    sku: "407",
+    image: p407,
+    price: 2999,
+    category: "Elf Bar",
+    bestseller: false,
+    trending: true,
+    relatedProducts: iceKingRelated,
+  },
 ];
