@@ -9,3 +9,4 @@
 - [x] Replace 12 illustrative replacement pods with the supplied JUUL2 records, nine supplied photos, sale price, and bestseller placement.
 - [x] Add the remaining three JUUL2 photos (SKUs 439, 441, 435).
 - [x] Tighten laptop navigation and add Shop by City links to city-specific catalog pages.
+- [x] Add eleven owner-supplied Elf Bar products with supplied prices, SKUs, bestseller/trending placement, and temporary image-on-request photos.
