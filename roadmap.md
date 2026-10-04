@@ -12,4 +12,5 @@
 - [x] Add eleven owner-supplied Elf Bar products with supplied prices, SKUs, bestseller/trending placement, and temporary image-on-request photos.
 - [x] Remove homepage category tile counters and add six supplied trending products with their photos.
 - [x] Rebuild Best Sellers with SKUs 851 and 491 kept plus six supplied bestsellers (Vaporesso XROS 2, Luxe QS, LUXE Q2 SE; Caliburn GK2, A3, X) with their photos.
+- [ ] Add All India Service and All India Delivery to footer, and 8–14% home-only badges with crossed-out previous prices for the 16 featured products.
 - [ ] Await verified product records, prices, WhatsApp number and business contact details from the owner.
