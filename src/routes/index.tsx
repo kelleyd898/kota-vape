@@ -172,7 +172,7 @@ function Home() {
             </div>
             <div className="grid grid-cols-2 md:grid-cols-4 gap-3 md:gap-5">
               {trendingProducts.map((p) => (
-                <ProductCard key={p.id} product={p} />
+                 <ProductCard key={p.id} product={p} showDiscount />
               ))}
             </div>
           </div>
@@ -185,7 +185,7 @@ function Home() {
           </div>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-3 md:gap-5">
             {bestSellerProducts.map((p) => (
-              <ProductCard key={p.id} product={p} />
+               <ProductCard key={p.id} product={p} showDiscount />
             ))}
           </div>
         </section>
