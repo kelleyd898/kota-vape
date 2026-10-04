@@ -21,14 +21,9 @@ const homeCategoryImages = [elfImage, uwellImage, saltImage, igetImage];
 const homeCategorySlugs = ["elf-bar", "uwell", "pod-salt", "iget"];
 const homeCategories = homeCategorySlugs.map((slug) => categories.find((c) => c.slug === slug)!).filter(Boolean);
 const allProducts = [...products, ...replacementPods];
-const trendingProducts = [
-  ...allProducts.filter((p) => p.trending),
-  ...allProducts.filter((p) => !p.trending),
-].slice(0, 8);
-const bestSellerProducts = [
-  ...allProducts.filter((p) => p.bestseller),
-  ...allProducts.filter((p) => !p.bestseller),
-].slice(0, 8);
+// Sections show only products explicitly flagged trending / bestseller.
+const trendingProducts = allProducts.filter((p) => p.trending);
+const bestSellerProducts = allProducts.filter((p) => p.bestseller);
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -170,28 +165,32 @@ function Home() {
           ))}
         </div>
       </section>
-      <section className="py-10 md:py-16 bg-surface">
-        <div className="page-container">
+      {trendingProducts.length > 0 && (
+        <section className="py-10 md:py-16 bg-surface">
+          <div className="page-container">
+            <div className="[&_h2]:text-primary">
+              <SectionHeading title="Trending Now" link="/shop" />
+            </div>
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-3 md:gap-5">
+              {trendingProducts.map((p) => (
+                <ProductCard key={p.id} product={p} />
+              ))}
+            </div>
+          </div>
+        </section>
+      )}
+      {bestSellerProducts.length > 0 && (
+        <section className="py-10 md:py-16 page-container">
           <div className="[&_h2]:text-primary">
-            <SectionHeading title="Trending Now" link="/shop" />
+            <SectionHeading title="Best Sellers" link="/shop" />
           </div>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-3 md:gap-5">
-            {trendingProducts.map((p) => (
+            {bestSellerProducts.map((p) => (
               <ProductCard key={p.id} product={p} />
             ))}
           </div>
-        </div>
-      </section>
-      <section className="py-10 md:py-16 page-container">
-        <div className="[&_h2]:text-primary">
-          <SectionHeading title="Best Sellers" link="/shop" />
-        </div>
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-3 md:gap-5">
-          {bestSellerProducts.map((p) => (
-            <ProductCard key={p.id} product={p} />
-          ))}
-        </div>
-      </section>
+        </section>
+      )}
       <section className="bg-surface py-10 md:py-16">
         <div className="page-container grid lg:grid-cols-[.8fr_1.2fr] gap-10 lg:gap-24">
           <div>
