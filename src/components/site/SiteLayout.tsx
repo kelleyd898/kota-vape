@@ -16,6 +16,8 @@ const consultationUrl = contact.whatsapp
   ? `https://wa.me/${contact.whatsapp.replace(/\D/g, '')}?text=${encodeURIComponent(consultationMessage)}`
   : null;
 
+const scrollToTop = () => { setTimeout(() => window.scrollTo({ top: 0, behavior: 'smooth' }), 60); };
+
 export function SiteLayout({ children }: { children: React.ReactNode }) {
   const [menuOpen, setMenuOpen] = useState(false);
   const [searchOpen, setSearchOpen] = useState(false);
