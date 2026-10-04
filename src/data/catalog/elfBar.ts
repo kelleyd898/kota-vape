@@ -10,7 +10,7 @@ import p410 from "@/assets/products/410.webp";
 import p409 from "@/assets/products/409.webp";
 import p405 from "@/assets/products/405.webp";
 import p408 from "@/assets/products/408.webp";
-import p407 from "@/assets/products/407.webp";
+import c407 from "@/assets/products/407.webp";
 import type { Product } from "./types";
 const iceKingRelated = [
   "elf-bar-ice-king-blueberry-ice-30k",
@@ -155,7 +155,7 @@ export const elfBarProducts: Product[] = [
     slug: "elf-bar-moon-night-40k-peach-ice",
     name: "Elf Bar Moon Night 40K – Peach Ice",
     sku: "407",
-    image: p407,
+    image: c407,
     price: 2999,
     category: "Elf Bar",
     bestseller: false,
