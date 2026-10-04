@@ -50,7 +50,7 @@ const sections: { title: string; body: string[]; list?: string[] }[] = [
     title: '6. How to Initiate a Return',
     body: [
       'To start a return, you must obtain a Return Merchandise Authorization (RMA) number. Returns sent without prior authorization will not be processed. To initiate the process:',
-      'Email our customer support team at support@vapeshopjaipur1.com.',
+      'Email our customer support team at kotavapeshop@gmail.com.',
       'Provide your Order ID, the specific item(s) you wish to return, and the reason for the return.',
       'Include clear photos of the product in its original, sealed packaging.',
       'Once your request is approved, we will issue an RMA number and provide the return shipping address.',
@@ -79,12 +79,12 @@ const sections: { title: string; body: string[]; list?: string[] }[] = [
   {
     title: '10. Contact Support',
     body: [
-      'If you have any further questions regarding our Refund and Returns Policy, please do not hesitate to contact our dedicated support team in Jaipur. You can get in touch with us by visiting our Contact Us page or emailing us directly at support@vapeshopjaipur1.com.',
+      'If you have any further questions regarding our Refund and Returns Policy, please do not hesitate to contact our dedicated support team in Jaipur. You can get in touch with us by visiting our Contact Us page or emailing us directly at kotavapeshop@gmail.com.',
     ],
   },
 ];
 
-const EMAIL = 'support@vapeshopjaipur1.com';
+const EMAIL = 'kotavapeshop@gmail.com';
 
 function renderEmail(text: string) {
   const parts = text.split(EMAIL);

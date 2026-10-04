@@ -62,7 +62,7 @@ function Contact() {
           <p className="mt-3 text-muted-foreground leading-7">For general inquiries, order support, and returns, email us at:</p>
           <div className="mt-4 max-w-md border border-border bg-card p-5 flex items-center gap-5">
             <Mail className="text-primary shrink-0" size={22} />
-            <a href="mailto:support@vapeshopjaipur1.com" className="text-primary hover:opacity-80 transition-opacity break-all">support@vapeshopjaipur1.com</a>
+            <a href="mailto:kotavapeshop@gmail.com" className="text-primary hover:opacity-80 transition-opacity break-all">kotavapeshop@gmail.com</a>
           </div>
 
           <h3 className="font-display text-2xl mt-10 text-primary">Phone &amp; WhatsApp</h3>
