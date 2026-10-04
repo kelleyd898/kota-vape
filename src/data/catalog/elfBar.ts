@@ -139,7 +139,7 @@ export const elfBarProducts: Product[] = [
     image: p405,
     price: 3099,
     category: "Elf Bar",
-    bestseller: true,
+    bestseller: false,
     relatedProducts: iceKingRelated,
   },
   {
