@@ -9,5 +9,6 @@ export type Product = {
   originalPrice?: number;
   category: CategoryName;
   bestseller: boolean;
+  trending?: boolean;
   relatedProducts: string[];
 };
