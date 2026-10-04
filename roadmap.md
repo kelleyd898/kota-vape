@@ -10,3 +10,5 @@
 - [x] Add the remaining three JUUL2 photos (SKUs 439, 441, 435).
 - [x] Tighten laptop navigation and add Shop by City links to city-specific catalog pages.
 - [x] Add eleven owner-supplied Elf Bar products with supplied prices, SKUs, bestseller/trending placement, and temporary image-on-request photos.
+- [x] Remove homepage category tile counters and add six supplied trending products with their photos.
+- [ ] Await the two additional Best Seller products and details from the owner.
