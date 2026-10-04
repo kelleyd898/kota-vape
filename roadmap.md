@@ -11,4 +11,5 @@
 - [x] Tighten laptop navigation and add Shop by City links to city-specific catalog pages.
 - [x] Add eleven owner-supplied Elf Bar products with supplied prices, SKUs, bestseller/trending placement, and temporary image-on-request photos.
 - [x] Remove homepage category tile counters and add six supplied trending products with their photos.
-- [ ] Await the two additional Best Seller products and details from the owner.
+- [x] Rebuild Best Sellers with SKUs 851 and 491 kept plus six supplied bestsellers (Vaporesso XROS 2, Luxe QS, LUXE Q2 SE; Caliburn GK2, A3, X) with their photos.
+- [ ] Await verified product records, prices, WhatsApp number and business contact details from the owner.
