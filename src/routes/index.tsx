@@ -153,7 +153,6 @@ function Home() {
                 className="w-full h-full object-cover opacity-80 transition-transform duration-500 group-hover:scale-105"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent" />
-              <span className="absolute top-4 left-4 text-[10px] tracking-widest text-primary">0{i + 1} / 04</span>
               <div className="absolute bottom-4 left-4 right-4">
                 <p className="text-[10px] uppercase tracking-widest text-muted-foreground">{category.name}</p>
                 <div className="flex justify-between items-end mt-1">

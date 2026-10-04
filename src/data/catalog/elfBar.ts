@@ -11,6 +11,10 @@ import p409 from "@/assets/products/409.webp";
 import p405 from "@/assets/products/405.webp";
 import p408 from "@/assets/products/408.webp";
 import c407 from "@/assets/products/407.webp";
+import moonNightStrawberryKiwiAsset from "@/assets/products/406.webp.asset.json";
+import moonNightBlackberryCranberryAsset from "@/assets/products/404.webp.asset.json";
+import moonNightBlueberryIceAsset from "@/assets/products/403.webp.asset.json";
+import moonNightCoconutToastyAsset from "@/assets/products/402.webp.asset.json";
 import type { Product } from "./types";
 const iceKingRelated = [
   "elf-bar-ice-king-blueberry-ice-30k",
@@ -161,5 +165,53 @@ export const elfBarProducts: Product[] = [
     bestseller: false,
     trending: true,
     relatedProducts: iceKingRelated,
+  },
+  {
+    id: 26,
+    slug: "elf-bar-moon-night-40k-strawberry-kiwi-ice",
+    name: "Elf Bar Moon Night 40K – Strawberry Kiwi Ice",
+    sku: "406",
+    image: moonNightStrawberryKiwiAsset.url,
+    price: 2999,
+    category: "Elf Bar",
+    bestseller: false,
+    trending: true,
+    relatedProducts: ["elf-bar-moon-night-40k-blackberry-cranberry", "elf-bar-moon-night-40k-blueberry-ice"],
+  },
+  {
+    id: 27,
+    slug: "elf-bar-moon-night-40k-blackberry-cranberry",
+    name: "Elf Bar MoonNight 40K – Blackberry Cranberry",
+    sku: "404",
+    image: moonNightBlackberryCranberryAsset.url,
+    price: 2999,
+    category: "Elf Bar",
+    bestseller: false,
+    trending: true,
+    relatedProducts: ["elf-bar-moon-night-40k-blueberry-ice", "elf-bar-moon-night-40k-strawberry-kiwi-ice"],
+  },
+  {
+    id: 28,
+    slug: "elf-bar-moon-night-40k-blueberry-ice",
+    name: "Elf Bar MoonNight 40K – Blueberry Ice",
+    sku: "403",
+    image: moonNightBlueberryIceAsset.url,
+    price: 2999,
+    category: "Elf Bar",
+    bestseller: false,
+    trending: true,
+    relatedProducts: ["elf-bar-moon-night-40k-blackberry-cranberry", "elf-bar-moon-night-40k-coconut-toasty"],
+  },
+  {
+    id: 29,
+    slug: "elf-bar-moon-night-40k-coconut-toasty",
+    name: "Elf Bar MoonNight 40K – Coconut Toasty",
+    sku: "402",
+    image: moonNightCoconutToastyAsset.url,
+    price: 2999,
+    category: "Elf Bar",
+    bestseller: false,
+    trending: true,
+    relatedProducts: ["elf-bar-moon-night-40k-blueberry-ice", "elf-bar-moon-night-40k-blackberry-cranberry"],
   },
 ];
