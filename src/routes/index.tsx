@@ -11,7 +11,7 @@ import { categories } from "@/data/categories";
 import { cities } from "@/data/cities";
 import { contact } from "@/config/contact";
 import heroImage from "@/assets/hero-vape.jpg";
-import luxeQ2SeAsset from "@/assets/products/789.webp.asset.json";
+import imageOnRequest from "@/assets/image-on-request.webp";
 import elfImage from "@/assets/categories/elf.webp";
 import uwellImage from "@/assets/categories/uwell.webp";
 import saltImage from "@/assets/categories/Pod-salt.webp";
@@ -229,8 +229,8 @@ function Home() {
         <div className="flex items-center justify-center p-10 md:p-14">
           <div className="relative">
             <img
-              src={luxeQ2SeAsset.url}
-              alt="Vaporesso LUXE Q2 SE"
+              src={imageOnRequest}
+              alt="Vaporesso LUXE Q2 SE — image available on request"
               loading="lazy"
               className="w-56 h-56 md:w-72 md:h-72 object-contain rounded-lg border border-border bg-background p-2"
             />
