@@ -21,14 +21,9 @@ const homeCategoryImages = [elfImage, uwellImage, saltImage, igetImage];
 const homeCategorySlugs = ["elf-bar", "uwell", "pod-salt", "iget"];
 const homeCategories = homeCategorySlugs.map((slug) => categories.find((c) => c.slug === slug)!).filter(Boolean);
 const allProducts = [...products, ...replacementPods];
-const trendingProducts = [
-  ...allProducts.filter((p) => p.trending),
-  ...allProducts.filter((p) => !p.trending),
-].slice(0, 8);
-const bestSellerProducts = [
-  ...allProducts.filter((p) => p.bestseller),
-  ...allProducts.filter((p) => !p.bestseller),
-].slice(0, 8);
+// Sections show only products explicitly flagged trending / bestseller.
+const trendingProducts = allProducts.filter((p) => p.trending);
+const bestSellerProducts = allProducts.filter((p) => p.bestseller);
 
 export const Route = createFileRoute("/")({
   head: () => ({
