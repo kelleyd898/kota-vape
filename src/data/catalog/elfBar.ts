@@ -169,7 +169,7 @@ export const elfBarProducts: Product[] = [
     relatedProducts: iceKingRelated,
   },
   {
-    id: 26,
+    id: 40,
     slug: "elf-bar-moon-night-40k-strawberry-kiwi-ice",
     name: "Elf Bar Moon Night 40K – Strawberry Kiwi Ice",
     sku: "406",
@@ -182,7 +182,7 @@ export const elfBarProducts: Product[] = [
     relatedProducts: ["elf-bar-moon-night-40k-blackberry-cranberry", "elf-bar-moon-night-40k-blueberry-ice"],
   },
   {
-    id: 27,
+    id: 41,
     slug: "elf-bar-moon-night-40k-blackberry-cranberry",
     name: "Elf Bar MoonNight 40K – Blackberry Cranberry",
     sku: "404",
@@ -195,7 +195,7 @@ export const elfBarProducts: Product[] = [
     relatedProducts: ["elf-bar-moon-night-40k-blueberry-ice", "elf-bar-moon-night-40k-strawberry-kiwi-ice"],
   },
   {
-    id: 28,
+    id: 42,
     slug: "elf-bar-moon-night-40k-blueberry-ice",
     name: "Elf Bar MoonNight 40K – Blueberry Ice",
     sku: "403",
@@ -208,7 +208,7 @@ export const elfBarProducts: Product[] = [
     relatedProducts: ["elf-bar-moon-night-40k-blackberry-cranberry", "elf-bar-moon-night-40k-coconut-toasty"],
   },
   {
-    id: 29,
+    id: 43,
     slug: "elf-bar-moon-night-40k-coconut-toasty",
     name: "Elf Bar MoonNight 40K – Coconut Toasty",
     sku: "402",
