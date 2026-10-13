@@ -16,7 +16,7 @@ const shopSearchSchema = z.object({
 
 export const Route = createFileRoute('/shop')({
   validateSearch: zodValidator(shopSearchSchema),
-  head: () => ({ meta: [{ title: 'Premium Vape Store Kota | KOTA VAPE SHOP Catalog' }, { name: 'description', content: 'Explore the premium vape store Kota catalog of device and pod profiles, organized by category for adults researching products.' }, { property: 'og:title', content: 'Premium Vape Store Kota | KOTA VAPE SHOP Catalog' }, { property: 'og:description', content: 'Explore device and pod profiles by category in Kota.' }, { property: 'og:type', content: 'website' }, { name: 'twitter:card', content: 'summary_large_image' }] }),
+  head: () => ({ meta: [{ title: 'Premium Vape Store Kota | ALL INDIA VAPE SERVICE SHOP Catalog' }, { name: 'description', content: 'Explore the premium vape store Kota catalog of device and pod profiles, organized by category for adults researching products.' }, { property: 'og:title', content: 'Premium Vape Store Kota | ALL INDIA VAPE SERVICE SHOP Catalog' }, { property: 'og:description', content: 'Explore device and pod profiles by category in Kota.' }, { property: 'og:type', content: 'website' }, { name: 'twitter:card', content: 'summary_large_image' }] }),
   component: Shop,
 });
 

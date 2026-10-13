@@ -28,13 +28,13 @@ const bestSellerProducts = allProducts.filter((p) => p.bestseller);
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "KOTA VAPE SHOP | Premium Product Information in Kota" },
+      { title: "ALL INDIA VAPE SERVICE SHOP | Premium Product Information in Kota" },
       {
         name: "description",
         content:
-          "Explore adult-focused device and pod information, brand guides, and local support from KOTA VAPE SHOP.",
+          "Explore adult-focused device and pod information, brand guides, and local support from ALL INDIA VAPE SERVICE SHOP.",
       },
-      { property: "og:title", content: "KOTA VAPE SHOP | Premium Product Information in Kota" },
+      { property: "og:title", content: "ALL INDIA VAPE SERVICE SHOP | Premium Product Information in Kota" },
       {
         property: "og:description",
         content: "A curated informational catalog and product research resource based in Kota.",

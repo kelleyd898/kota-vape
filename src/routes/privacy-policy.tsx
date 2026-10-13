@@ -1,6 +1,6 @@
 import { createFileRoute } from '@tanstack/react-router';
 export const Route = createFileRoute('/privacy-policy')({
-  head: () => ({ meta: [{ title: 'Privacy Policy | KOTA VAPE SHOP' }, { name: 'description', content: 'Privacy policy: how we collect, use, and safeguard your personal information.' }, { property: 'og:title', content: 'Privacy Policy | KOTA VAPE SHOP' }, { property: 'og:description', content: 'How we collect, use, and safeguard your personal information.' }, { property: 'og:type', content: 'website' }, { name: 'twitter:card', content: 'summary_large_image' }] }),
+  head: () => ({ meta: [{ title: 'Privacy Policy | ALL INDIA VAPE SERVICE SHOP' }, { name: 'description', content: 'Privacy policy: how we collect, use, and safeguard your personal information.' }, { property: 'og:title', content: 'Privacy Policy | ALL INDIA VAPE SERVICE SHOP' }, { property: 'og:description', content: 'How we collect, use, and safeguard your personal information.' }, { property: 'og:type', content: 'website' }, { name: 'twitter:card', content: 'summary_large_image' }] }),
   component: PrivacyPolicy,
 });
 
