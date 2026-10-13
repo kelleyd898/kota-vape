@@ -14,3 +14,5 @@
 - [x] Rebuild Best Sellers with SKUs 851 and 491 kept plus six supplied bestsellers (Vaporesso XROS 2, Luxe QS, LUXE Q2 SE; Caliburn GK2, A3, X) with their photos.
 - [x] Add All India Service and All India Delivery to footer, and 8–14% home-only badges with crossed-out previous prices for the 16 featured products.
 - [ ] Await verified product records, prices, WhatsApp number and business contact details from the owner.
+- [x] Rename the brand to ALL INDIA VAPE SERVICE SHOP across titles, headings, footer and copy.
+- [x] Replace Rajasthan-only Shop by City with major all-India cities (Delhi, Mumbai, Bengaluru, Hyderabad, Chennai, Kolkata, Pune, Ahmedabad, Jaipur, Lucknow, Indore, Surat) across dropdown, home tiles and city pages.
