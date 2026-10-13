@@ -11,10 +11,10 @@ import { contact } from '@/config/contact';
 export const Route = createFileRoute('/product/$slug')({
   loader: ({ params }) => { const product = getProductBySlug(params.slug); if (!product) throw notFound(); return product; },
   head: ({ loaderData }) => ({ meta: [
-    { title: loaderData ? `${loaderData.name} | KOTA VAPE SHOP` : 'Product not found | KOTA VAPE SHOP' },
-    { name: 'description', content: loaderData ? `View ${loaderData.name} in the KOTA VAPE SHOP catalog.` : 'Browse product information at KOTA VAPE SHOP.' },
-    { property: 'og:title', content: loaderData ? `${loaderData.name} | KOTA VAPE SHOP` : 'Product not found | KOTA VAPE SHOP' },
-    { property: 'og:description', content: loaderData ? `View ${loaderData.name} in the KOTA VAPE SHOP catalog.` : 'Explore our catalog.' },
+    { title: loaderData ? `${loaderData.name} | ALL INDIA VAPE SERVICE SHOP` : 'Product not found | ALL INDIA VAPE SERVICE SHOP' },
+    { name: 'description', content: loaderData ? `View ${loaderData.name} in the ALL INDIA VAPE SERVICE SHOP catalog.` : 'Browse product information at ALL INDIA VAPE SERVICE SHOP.' },
+    { property: 'og:title', content: loaderData ? `${loaderData.name} | ALL INDIA VAPE SERVICE SHOP` : 'Product not found | ALL INDIA VAPE SERVICE SHOP' },
+    { property: 'og:description', content: loaderData ? `View ${loaderData.name} in the ALL INDIA VAPE SERVICE SHOP catalog.` : 'Explore our catalog.' },
     { property: 'og:type', content: 'website' }, { name: 'twitter:card', content: 'summary_large_image' },
   ] }),
   component: ProductDetail,

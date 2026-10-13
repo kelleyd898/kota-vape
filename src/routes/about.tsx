@@ -14,9 +14,9 @@ const toc = [
 export const Route = createFileRoute('/about')({
   head: () => ({
     meta: [
-      { title: 'About Us | KOTA VAPE SHOP' },
-      { name: 'description', content: 'About KOTA VAPE SHOP: your local premium vape store — authenticity guarantee, hyper-local delivery in Jaipur, and nationwide reach.' },
-      { property: 'og:title', content: 'About Us | KOTA VAPE SHOP' },
+      { title: 'About Us | ALL INDIA VAPE SERVICE SHOP' },
+      { name: 'description', content: 'About ALL INDIA VAPE SERVICE SHOP: your local premium vape store — authenticity guarantee, hyper-local delivery in Jaipur, and nationwide reach.' },
+      { property: 'og:title', content: 'About Us | ALL INDIA VAPE SERVICE SHOP' },
       { property: 'og:description', content: 'Your local destination for premium, authentic vaping products — Jaipur rooted, delivered nationwide.' },
       { property: 'og:type', content: 'website' },
       { name: 'twitter:card', content: 'summary_large_image' },
@@ -29,9 +29,9 @@ function About() {
   return (
     <div className="page-container py-10 md:py-16">
       <p className="eyebrow">About us</p>
-      <h1 className="font-display text-5xl md:text-7xl font-semibold text-primary leading-tight max-w-4xl">About KOTA VAPE SHOP: Your Local Premium Vape Store</h1>
+      <h1 className="font-display text-5xl md:text-7xl font-semibold text-primary leading-tight max-w-4xl">About ALL INDIA VAPE SERVICE SHOP: Your Local Premium Vape Store</h1>
       <p className="max-w-none md:max-w-5xl lg:max-w-none mt-8 text-muted-foreground leading-8">
-        Welcome to KOTA VAPE SHOP, your ultimate local destination for premium, authentic, and high-quality vaping products. We are more than just an e-commerce store; we are a dedicated community of vaping enthusiasts committed to providing the finest products, exceptional customer service, and a seamless shopping experience for adult vapers across Jaipur and beyond.
+        Welcome to ALL INDIA VAPE SERVICE SHOP, your ultimate local destination for premium, authentic, and high-quality vaping products. We are more than just an e-commerce store; we are a dedicated community of vaping enthusiasts committed to providing the finest products, exceptional customer service, and a seamless shopping experience for adult vapers across Jaipur and beyond.
       </p>
 
       <div className="border-t border-border mt-12 pt-10 max-w-2xl">
@@ -45,13 +45,13 @@ function About() {
         </ol>
       </div>
 
-      <p className="sr-only">About KOTA VAPE SHOP Premium Vapes Authentic E-liquids Delivery in Malviya Nagar Vaishali Nagar</p>
+      <p className="sr-only">About ALL INDIA VAPE SERVICE SHOP Premium Vapes Authentic E-liquids Delivery in Malviya Nagar Vaishali Nagar</p>
 
       <div className="mt-14 space-y-16 max-w-none">
         <section id="our-story" className="scroll-mt-28">
           <h2 className="section-title text-primary">1. Our Story and Vision</h2>
           <p className="mt-5 text-muted-foreground leading-8">
-            KOTA VAPE SHOP was founded with a clear vision: to revolutionize the local vaping landscape by making high-end, reliable, and authentic products accessible to adult consumers right here in Rajasthan. We recognized a significant gap in the market where quality was compromised, and customers often faced counterfeit devices. Our goal was to build a secure, trusted online platform where quality meets hyper-local convenience.
+            ALL INDIA VAPE SERVICE SHOP was founded with a clear vision: to revolutionize the local vaping landscape by making high-end, reliable, and authentic products accessible to adult consumers right here in Rajasthan. We recognized a significant gap in the market where quality was compromised, and customers often faced counterfeit devices. Our goal was to build a secure, trusted online platform where quality meets hyper-local convenience.
           </p>
         </section>
 
@@ -84,7 +84,7 @@ function About() {
         <section id="authenticity" className="scroll-mt-28">
           <h2 className="section-title text-primary">5. 100% Authenticity Guarantee</h2>
           <p className="mt-5 text-muted-foreground leading-8">
-            The market is flooded with counterfeit items, but we guarantee that every device, coil, and e-liquid from KOTA VAPE SHOP is 100% genuine. Sourced directly from verified manufacturers and official distributors, our strict quality control ensures safety and top-tier performance for every adult vaper.
+            The market is flooded with counterfeit items, but we guarantee that every device, coil, and e-liquid from ALL INDIA VAPE SERVICE SHOP is 100% genuine. Sourced directly from verified manufacturers and official distributors, our strict quality control ensures safety and top-tier performance for every adult vaper.
           </p>
         </section>
 

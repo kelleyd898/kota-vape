@@ -11,9 +11,9 @@ const podsSearchSchema = z.object({
 export const Route = createFileRoute('/replacement-pods')({
   validateSearch: zodValidator(podsSearchSchema),
   head: () => ({ meta: [
-    { title: 'Replacement Pods | KOTA VAPE SHOP' },
-    { name: 'description', content: 'Browse replacement pod references at KOTA VAPE SHOP.' },
-    { property: 'og:title', content: 'Replacement Pods | KOTA VAPE SHOP' },
+    { title: 'Replacement Pods | ALL INDIA VAPE SERVICE SHOP' },
+    { name: 'description', content: 'Browse replacement pod references at ALL INDIA VAPE SERVICE SHOP.' },
+    { property: 'og:title', content: 'Replacement Pods | ALL INDIA VAPE SERVICE SHOP' },
     { property: 'og:description', content: 'Explore replacement pod references and contact us to confirm details.' },
     { property: 'og:type', content: 'website' },
     { name: 'twitter:card', content: 'summary_large_image' },

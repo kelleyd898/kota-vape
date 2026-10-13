@@ -1,6 +1,6 @@
 import { createFileRoute } from '@tanstack/react-router';
 export const Route = createFileRoute('/refund-policy')({
-  head: () => ({ meta: [{ title: 'Refund and Returns Policy | KOTA VAPE SHOP' }, { name: 'description', content: 'Refund and returns policy: return window, eligibility, defective products, refund timelines and exchanges.' }, { property: 'og:title', content: 'Refund and Returns Policy | KOTA VAPE SHOP' }, { property: 'og:description', content: 'Return window, eligibility, defective products, refund timelines and exchanges.' }, { property: 'og:type', content: 'website' }, { name: 'twitter:card', content: 'summary_large_image' }] }),
+  head: () => ({ meta: [{ title: 'Refund and Returns Policy | ALL INDIA VAPE SERVICE SHOP' }, { name: 'description', content: 'Refund and returns policy: return window, eligibility, defective products, refund timelines and exchanges.' }, { property: 'og:title', content: 'Refund and Returns Policy | ALL INDIA VAPE SERVICE SHOP' }, { property: 'og:description', content: 'Return window, eligibility, defective products, refund timelines and exchanges.' }, { property: 'og:type', content: 'website' }, { name: 'twitter:card', content: 'summary_large_image' }] }),
   component: RefundPolicy,
 });
 

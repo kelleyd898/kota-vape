@@ -1,6 +1,6 @@
 import { createFileRoute } from '@tanstack/react-router';
 export const Route = createFileRoute('/shipping-policy')({
-  head: () => ({ meta: [{ title: 'Shipping Policy | KOTA VAPE SHOP' }, { name: 'description', content: 'Shipping policy: order processing times, shipping rates, delivery estimates and age verification at delivery.' }, { property: 'og:title', content: 'Shipping Policy | KOTA VAPE SHOP' }, { property: 'og:description', content: 'Order processing times, shipping rates, delivery estimates and age verification at delivery.' }, { property: 'og:type', content: 'website' }, { name: 'twitter:card', content: 'summary_large_image' }] }),
+  head: () => ({ meta: [{ title: 'Shipping Policy | ALL INDIA VAPE SERVICE SHOP' }, { name: 'description', content: 'Shipping policy: order processing times, shipping rates, delivery estimates and age verification at delivery.' }, { property: 'og:title', content: 'Shipping Policy | ALL INDIA VAPE SERVICE SHOP' }, { property: 'og:description', content: 'Order processing times, shipping rates, delivery estimates and age verification at delivery.' }, { property: 'og:type', content: 'website' }, { name: 'twitter:card', content: 'summary_large_image' }] }),
   component: ShippingPolicy,
 });
 

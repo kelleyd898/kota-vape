@@ -28,16 +28,16 @@ const bestSellerProducts = allProducts.filter((p) => p.bestseller);
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "KOTA VAPE SHOP | Premium Product Information in Kota" },
+      { title: "ALL INDIA VAPE SERVICE SHOP | Premium Product Information Across India" },
       {
         name: "description",
         content:
-          "Explore adult-focused device and pod information, brand guides, and local support from KOTA VAPE SHOP.",
+          "Explore adult-focused device and pod information, brand guides, and support from ALL INDIA VAPE SERVICE SHOP.",
       },
-      { property: "og:title", content: "KOTA VAPE SHOP | Premium Product Information in Kota" },
+      { property: "og:title", content: "ALL INDIA VAPE SERVICE SHOP | Premium Product Information Across India" },
       {
         property: "og:description",
-        content: "A curated informational catalog and product research resource based in Kota.",
+        content: "A curated informational catalog and product research resource serving every corner of India.",
       },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
@@ -49,7 +49,7 @@ const spotlightWhatsAppUrl = contact.whatsapp
   ? `https://wa.me/${contact.whatsapp.replace(/\D/g, "")}?text=${encodeURIComponent("Hi, I read the Spotlight Review for the LUXE Q2 SE. Can you share availability?")}`
   : null;
 const heroWhatsAppUrl = contact.whatsapp
-  ? `https://wa.me/${contact.whatsapp.replace(/\D/g, "")}?text=${encodeURIComponent("Hi, I want to order vape in Kota")}`
+  ? `https://wa.me/${contact.whatsapp.replace(/\D/g, "")}?text=${encodeURIComponent("Hi, I want to order vape products")}`
   : null;
 const reasons = [
   {
@@ -83,16 +83,16 @@ function Home() {
         <div className="absolute inset-0 bg-gradient-to-r from-background via-background/85 to-transparent" />
         <div className="page-container relative z-10 py-14 md:py-16">
           <div className="max-w-[600px]">
-            <p className="sr-only">Kota, Rajasthan</p>
-            <h1 className="font-display text-[clamp(3rem,15vw,8rem)] font-semibold leading-[0.85]">
-              KOTA
+            <p className="sr-only">Serving every corner of India</p>
+            <h1 className="font-display text-[clamp(2.75rem,11vw,6.5rem)] font-semibold leading-[0.9]">
+              ALL INDIA
               <br />
-              <span className="text-primary">VAPE SHOP</span>
+              <span className="text-primary block text-[0.55em] tracking-[0.04em]">VAPE SERVICE SHOP</span>
             </h1>
             <div className="w-16 h-px bg-primary my-6 md:my-7" />
             <p className="text-muted-foreground text-base md:text-lg leading-8 max-w-lg">
               A considered place to explore product formats, discover brands, and get clear information from a team
-              rooted in Kota.
+              serving every corner of India.
             </p>
             <div className="flex flex-col sm:flex-row sm:flex-wrap gap-3 mt-8 md:mt-9">
               <Button
