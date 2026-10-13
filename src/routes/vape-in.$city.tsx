@@ -14,7 +14,7 @@ export const Route = createFileRoute('/vape-in/$city')({
   head: ({ loaderData }) => {
     const title = loaderData ? `Vape in ${loaderData.name} | ALL INDIA VAPE SERVICE SHOP` : 'City not found | ALL INDIA VAPE SERVICE SHOP';
     const description = loaderData
-      ? `Explore ALL INDIA VAPE SERVICE SHOP product profiles and information for adults in ${loaderData.name}, Rajasthan.`
+      ? `Explore ALL INDIA VAPE SERVICE SHOP product profiles and information for adults in ${loaderData.name}, ${loaderData.state}.`
       : 'Explore the ALL INDIA VAPE SERVICE SHOP city catalog.';
     return { meta: [
       { title }, { name: 'description', content: description },
