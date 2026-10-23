@@ -1,6 +1,6 @@
 export const contact = {
   phone: '',
-  whatsapp: '+1 (209) 439-7714',
+  whatsapp: '+91 74658 25108',
   email: 'kotavapeshop@gmail.com',
   location: 'Kota, Rajasthan',
 };
