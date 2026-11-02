@@ -13,12 +13,11 @@ import { contact } from "@/config/contact";
 import heroImage from "@/assets/hero-vape.jpg";
 import imageOnRequest from "@/assets/image-on-request.webp";
 import elfImage from "@/assets/categories/elf.webp";
-import uwellImage from "@/assets/categories/uwell.webp";
 import saltImage from "@/assets/categories/Pod-salt.webp";
 import igetImage from "@/assets/categories/iget.webp";
-const homeCategoryImages = [elfImage, uwellImage, saltImage, igetImage];
-// Landing page shows only these 4 brands; all 8 stay in the catalog/menu.
-const homeCategorySlugs = ["elf-bar", "uwell", "pod-salt", "iget"];
+const homeCategoryImages = [elfImage, igetImage, saltImage, imageOnRequest];
+// Landing page shows the 4 shop categories.
+const homeCategorySlugs = ["elf-bar", "iget-vape", "nic-salts", "terra"];
 const homeCategories = homeCategorySlugs.map((slug) => categories.find((c) => c.slug === slug)!).filter(Boolean);
 const allProducts = [...products, ...replacementPods];
 // Sections show only products explicitly flagged trending / bestseller.
