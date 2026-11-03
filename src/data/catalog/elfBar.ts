@@ -8,7 +8,6 @@ import imgD1MangoStrawberry from '@/assets/products/elf-d1-mango-strawberry.webp
 import imgD1KiwiGuavaGrape from '@/assets/products/elf-d1-kiwi-guava-grape.webp';
 import imgIkMixedBerries from '@/assets/products/elf-ik-mixed-berries.webp';
 import imgD3PeachIce from '@/assets/products/elf-d3-peach-ice.webp';
-import imageOnRequest from '@/assets/image-on-request.webp';
 import type { Product } from './types';
 
 type Seed = { id: number; slug: string; name: string; image: string; price: number; features: string[]; bestseller?: boolean; trending?: boolean };
