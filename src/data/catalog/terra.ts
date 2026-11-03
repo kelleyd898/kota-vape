@@ -1,7 +1,8 @@
-import imageOnRequest from '@/assets/image-on-request.webp';
+import imgTwilightPearl from '@/assets/products/twilight-pearl.webp';
+import imgTereaSilver from '@/assets/products/terea-silver.webp';
+import imgTereaBronze from '@/assets/products/terea-bronze.webp';
 import type { Product } from './types';
 
-// Photos not supplied yet — placeholder until the owner provides them.
 export const terraProducts: Product[] = [
   {
     id: 201,
