@@ -1,14 +1,15 @@
-import imageOnRequest from '@/assets/image-on-request.webp';
+import imgTwilightPearl from '@/assets/products/twilight-pearl.webp';
+import imgTereaSilver from '@/assets/products/terea-silver.webp';
+import imgTereaBronze from '@/assets/products/terea-bronze.webp';
 import type { Product } from './types';
 
-// Photos not supplied yet — placeholder until the owner provides them.
 export const terraProducts: Product[] = [
   {
     id: 201,
     slug: 'iqos-terea-twilight-pearl',
     name: 'IQOS TEREA – Twilight Pearl',
     sku: null,
-    image: imageOnRequest,
+    image: imgTwilightPearl,
     price: 5000,
     originalPrice: 8000,
     category: 'Terra',
@@ -26,7 +27,7 @@ export const terraProducts: Product[] = [
     slug: 'iqos-terea-silver',
     name: 'IQOS TEREA – Silver',
     sku: null,
-    image: imageOnRequest,
+    image: imgTereaSilver,
     price: 5000,
     originalPrice: 8000,
     category: 'Terra',
@@ -44,7 +45,7 @@ export const terraProducts: Product[] = [
     slug: 'iqos-terea-bronze',
     name: 'IQOS TEREA – Bronze',
     sku: null,
-    image: imageOnRequest,
+    image: imgTereaBronze,
     price: 5000,
     originalPrice: 8000,
     category: 'Terra',
