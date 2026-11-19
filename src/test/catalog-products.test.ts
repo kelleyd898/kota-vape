@@ -45,6 +45,12 @@ describe('Owner-supplied product records', () => {
     expect(getProductBySlug(slug)?.productDetails).toEqual(suppliedDetails);
   });
 
+  it('uses the supplied photos for products 1–18', () => {
+    for (const [slug] of suppliedProducts.slice(0, 18)) {
+      expect(getProductBySlug(slug)?.image).not.toContain('image-on-request');
+    }
+  });
+
   it('places the three IGET SUN products in IGET Vape', () => {
     const igetSlugs = suppliedProducts.slice(-3).map(([slug]) => slug);
     expect(igetSlugs.map((slug) => getProductBySlug(slug)?.category)).toEqual([
