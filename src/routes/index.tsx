@@ -6,8 +6,12 @@ import { AllIndiaStrip } from "@/components/site/AllIndiaStrip";
 import { Button } from "@/components/ui/button";
 import { ProductCard } from "@/components/site/ProductCard";
 import { SectionHeading } from "@/components/site/SectionHeading";
-import { products } from "@/data/products";
-import { replacementPods } from "@/data/catalog/replacementPods";
+import {
+  homeBestSellerProducts,
+  homeCatalogProducts,
+  homeCollectionProducts,
+  homeTrendingProducts,
+} from "@/data/homeCatalog";
 import { categories } from "@/data/categories";
 import { cities } from "@/data/cities";
 import { contact } from "@/config/contact";
@@ -21,10 +25,6 @@ const homeCategoryImages = [elfImage, igetImage, saltImage, terraImage];
 // Landing page shows the 4 shop categories.
 const homeCategorySlugs = ["elf-bar", "iget-vape", "nic-salts", "terra"];
 const homeCategories = homeCategorySlugs.map((slug) => categories.find((c) => c.slug === slug)!).filter(Boolean);
-const allProducts = [...products, ...replacementPods];
-// Sections show only products explicitly flagged trending / bestseller.
-const trendingProducts = allProducts.filter((p) => p.trending);
-const bestSellerProducts = allProducts.filter((p) => p.bestseller);
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -165,29 +165,48 @@ function Home() {
           ))}
         </div>
       </section>
-      {trendingProducts.length > 0 && (
+      {homeTrendingProducts.length > 0 && (
         <section className="py-10 md:py-16 bg-surface">
           <div className="page-container">
             <div className="[&_h2]:text-primary">
               <SectionHeading title="Trending Now" link="/shop" />
             </div>
             <div className="grid grid-cols-2 md:grid-cols-4 gap-3 md:gap-5">
-              {trendingProducts.map((p) => (
+              {homeTrendingProducts.map((p) => (
                  <ProductCard key={p.id} product={p} showDiscount />
               ))}
             </div>
           </div>
         </section>
       )}
-      {bestSellerProducts.length > 0 && (
+      {homeBestSellerProducts.length > 0 && (
         <section className="py-10 md:py-16 page-container">
           <div className="[&_h2]:text-primary">
             <SectionHeading title="Best Sellers" link="/shop" />
           </div>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-3 md:gap-5">
-            {bestSellerProducts.map((p) => (
+            {homeBestSellerProducts.map((p) => (
                <ProductCard key={p.id} product={p} showDiscount />
-            ))}
+             ))}
+          </div>
+        </section>
+      )}
+      {homeCollectionProducts.length > 0 && (
+        <section className="py-10 md:py-16 bg-surface border-y border-border">
+          <div className="page-container">
+            <div className="[&_h2]:text-primary">
+              <SectionHeading
+                kicker="Handpicked for you"
+                title="Premium Collection"
+                description="Explore more top devices, disposables and heated tobacco picks from our main catalog."
+                link="/shop"
+              />
+            </div>
+            <div className="grid grid-cols-2 md:grid-cols-3 xl:grid-cols-5 gap-3 md:gap-5">
+              {homeCollectionProducts.map((product) => (
+                <ProductCard key={product.id} product={product} />
+              ))}
+            </div>
           </div>
         </section>
       )}

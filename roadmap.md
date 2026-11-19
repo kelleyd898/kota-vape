@@ -19,3 +19,4 @@
 - [x] Add products 9–25 with available photos, placeholders and shared Product Details.
 - [x] Add the supplied WebP photos for products 10–18.
 - [x] Add the supplied WebP photos for products 19–25.
+- [x] Show a large, non-duplicated premium product collection on the homepage using only the four main shop categories.

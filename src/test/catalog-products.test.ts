@@ -1,6 +1,13 @@
 import { describe, expect, it } from 'vitest';
 
 import { getProductBySlug } from '@/services/productService';
+import { products } from '@/data/products';
+import {
+  homeBestSellerProducts,
+  homeCatalogProducts,
+  homeCollectionProducts,
+  homeTrendingProducts,
+} from '@/data/homeCatalog';
 
 const suppliedProducts = [
   ['elfbar-gh23000-kiwi-passion-fruit-guava', 'Elfbar GH23000 Kiwi Passion Fruit Guava', 2400],
@@ -35,6 +42,37 @@ const suppliedDetails = [
   'Free delivery in All over India',
   'Cash on delivery available',
 ];
+
+describe('Homepage product collection', () => {
+  it('uses only the four main shop categories and never Replacement Pods', () => {
+    const allowedCategories = new Set(['Elf Bar', 'IGET Vape', 'Nic Salts', 'Terra']);
+    const homepageProducts = [
+      ...homeTrendingProducts,
+      ...homeBestSellerProducts,
+      ...homeCollectionProducts,
+    ];
+
+    expect(homepageProducts.length).toBeGreaterThan(0);
+    for (const product of homepageProducts) {
+      expect(allowedCategories.has(product.category)).toBe(true);
+      expect(product.category).not.toBe('Replacement Pods');
+    }
+  });
+
+  it('shows every main-catalog product exactly once across the homepage sections', () => {
+    const homepageSlugs = [
+      ...homeTrendingProducts,
+      ...homeBestSellerProducts,
+      ...homeCollectionProducts,
+    ].map((product) => product.slug);
+
+    expect(new Set(homepageSlugs).size).toBe(homepageSlugs.length);
+    expect(homepageSlugs.sort()).toEqual(homeCatalogProducts.map((product) => product.slug).sort());
+    expect(homeCatalogProducts.map((product) => product.slug).sort()).toEqual(
+      products.map((product) => product.slug).sort(),
+    );
+  });
+});
 
 describe('Owner-supplied product records', () => {
   it.each(suppliedProducts)('keeps the supplied name and price for %s', (slug, name, price) => {
