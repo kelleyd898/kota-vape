@@ -16,6 +16,8 @@ import imgCaliburnA3s from '@/assets/products/uwell-caliburn-a3s-16w-pod-kit.web
 import imgElfworldMintMenthol from '@/assets/products/elfworld-12000-mint-menthol.webp';
 import imgYoutoAntonovkaApple from '@/assets/products/youto-thanos-antonovka-apple.webp';
 import imgElfworldWatermelonIce from '@/assets/products/elfworld-12k-watermelon-ice.webp';
+import imgIkBlueRazzLemonade from '@/assets/products/elf-bar-ice-king-30k-blue-razz-lemonade.webp';
+import imageOnRequest from '@/assets/image-on-request.webp';
 import { standardProductDetails } from './productDetails';
 import type { Product } from './types';
 
@@ -40,6 +42,20 @@ const seeds: Seed[] = [
   { id: 316, slug: 'elfworld-12000-puffs-mint-menthol', name: 'Elfworld 12000 Puffs Mint Menthol', image: imgElfworldMintMenthol, price: 2000, productDetails: standardProductDetails },
   { id: 317, slug: 'youto-thanos-antonovka-apple', name: 'Youto Thanos Antonovka Apple', image: imgYoutoAntonovkaApple, price: 1500, productDetails: standardProductDetails },
   { id: 318, slug: 'elfworld-12k-watermelon-ice', name: 'Elfworld 12K Watermelon Ice', image: imgElfworldWatermelonIce, price: 2000, productDetails: standardProductDetails },
+  { id: 319, slug: 'elf-bar-ice-king-30k-blue-razz-lemonade', name: 'Elf Bar Ice King 30K Blue Razz Lemonade', image: imgIkBlueRazzLemonade, price: 2800, productDetails: standardProductDetails },
+  { id: 320, slug: 'smok-nord-x-60w-pod-mod-kit', name: 'SMOK NORD X 60W Pod Mod Kit', image: imageOnRequest, price: 5300, productDetails: standardProductDetails },
+  { id: 321, slug: 'elfbar-raya-d2-20000-puffs-watermelon-ice', name: 'Elfbar RAYA D2 20000 Puffs Watermelon Ice', image: imageOnRequest, price: 2000, productDetails: standardProductDetails },
+  { id: 322, slug: 'elfbar-raya-d3-all-flavours', name: 'Elfbar RAYA D3 All Flavours', image: imageOnRequest, price: 2200, productDetails: standardProductDetails },
+  { id: 323, slug: 'smok-novo-2-25w-pod-system', name: 'SMOK NOVO 2 25W Pod System', image: imageOnRequest, price: 3500, productDetails: standardProductDetails },
+  { id: 324, slug: 'chargeable-disposable-vapes-mixed-berries', name: 'Chargeable Disposable Vapes Mixed Berries', image: imageOnRequest, price: 1750, productDetails: standardProductDetails },
+  { id: 325, slug: 'gen-pt-60-vape-kit', name: 'GEN PT 60 Vape Kit', image: imageOnRequest, price: 4400, productDetails: standardProductDetails },
+  { id: 326, slug: 'drag-4-vape-mod-kit', name: 'DRAG 4 Vape Mod Kit', image: imageOnRequest, price: 4900, productDetails: standardProductDetails },
+  { id: 327, slug: 'uwell-crown-x-pod-system', name: 'UWELL Crown X Pod System', image: imageOnRequest, price: 2800, productDetails: standardProductDetails },
+  { id: 328, slug: 'smok-spaceman-prism-20k-apple-kiwi-ice', name: 'SMOK Spaceman Prism 20K Apple Kiwi Ice', image: imageOnRequest, price: 2200, productDetails: standardProductDetails },
+  { id: 329, slug: 'smok-spaceman-prism-20k-blue-razz-ice', name: 'SMOK Spaceman Prism 20K Blue Razz Ice', image: imageOnRequest, price: 2200, productDetails: standardProductDetails },
+  { id: 330, slug: 'youto-digi-15000-grape-ice', name: 'YOUTO DIGI 15000 Grape Ice', image: imageOnRequest, price: 1800, productDetails: standardProductDetails },
+  { id: 331, slug: 'elfbar-raya-d2-tobacco-5-percent-nic', name: 'Elfbar RAYA D2 Tobacco 5% Nic', image: imageOnRequest, price: 2300, productDetails: standardProductDetails },
+  { id: 332, slug: 'geek-bar-skyview-blue-razz-ice', name: 'Geek Bar Skyview Blue Razz Ice', image: imageOnRequest, price: 2300, productDetails: standardProductDetails },
 ];
 
 export const elfBarProducts: Product[] = seeds.map((s) => ({
