@@ -2,7 +2,7 @@
 - [x] Split the illustrative catalog by four categories and keep replacement pods in a separate collection and page.
 - [x] Use the four supplied category names with home-only category imagery, update navigation/filtering, and reduce gold saturation.
 - [x] Verify desktop/mobile navigation, filtering, detail pages and WhatsApp message.
-- [ ] Await verified product records, prices, WhatsApp number and business contact details from the owner.
+- [ ] Await remaining IGET Vape and Nic Salts product records and remaining product photos from the owner.
 - [x] Add fixed bottom-center query prompt and update floating WhatsApp message.
 - [x] Use supplied SEO phrases for Kota naturally without a scrolling keyword strip; clean logo outside its circle.
 - [x] Update homepage headings and spotlight copy, remove the four-value strip, and direct the spotlight inquiry to WhatsApp.
@@ -13,6 +13,6 @@
 - [x] Remove homepage category tile counters and add six supplied trending products with their photos.
 - [x] Rebuild Best Sellers with SKUs 851 and 491 kept plus six supplied bestsellers (Vaporesso XROS 2, Luxe QS, LUXE Q2 SE; Caliburn GK2, A3, X) with their photos.
 - [x] Add All India Service and All India Delivery to footer, and 8–14% home-only badges with crossed-out previous prices for the 16 featured products.
-- [ ] Await verified product records, prices, WhatsApp number and business contact details from the owner.
 - [x] Rename the brand to ALL INDIA VAPE SERVICE SHOP across titles, headings, footer and copy.
 - [x] Replace Rajasthan-only Shop by City with major all-India cities (Delhi, Mumbai, Bengaluru, Hyderabad, Chennai, Kolkata, Pune, Ahmedabad, Jaipur, Lucknow, Indore, Surat) across dropdown, home tiles and city pages.
+- [x] Add eight owner-supplied products with their WebP photos and shared Product Details.

@@ -11,6 +11,8 @@ export type Product = {
   bestseller: boolean;
   trending?: boolean;
   relatedProducts: string[];
+  /** Shared ordering and delivery details supplied by the owner. */
+  productDetails?: string[];
   /** Product features shown in the "Features" section of the product page (owner-supplied). */
   features?: string[];
   /** Per-product extra features (owner-supplied); falls back to the default list when absent. */

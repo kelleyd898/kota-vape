@@ -8,9 +8,18 @@ import imgD1MangoStrawberry from '@/assets/products/elf-d1-mango-strawberry.webp
 import imgD1KiwiGuavaGrape from '@/assets/products/elf-d1-kiwi-guava-grape.webp';
 import imgIkMixedBerries from '@/assets/products/elf-ik-mixed-berries.webp';
 import imgD3PeachIce from '@/assets/products/elf-d3-peach-ice.webp';
+import imgGhKiwiPassionFruitGuava from '@/assets/products/elfbar-gh23000-kiwi-passion-fruit-guava.webp';
+import imgGhBlueRazzIceRaspberry from '@/assets/products/elfbar-gh23000-blue-razz-ice-raspberry.webp';
+import imgYuzuTropicalMango from '@/assets/products/yuzu-15000-tropical-mango.webp';
+import imgBc5000WatermelonIce from '@/assets/products/elfbar-bc5000-watermelon-ice.webp';
+import imgCaliburnA3s from '@/assets/products/uwell-caliburn-a3s-16w-pod-kit.webp';
+import imgElfworldMintMenthol from '@/assets/products/elfworld-12000-mint-menthol.webp';
+import imgYoutoAntonovkaApple from '@/assets/products/youto-thanos-antonovka-apple.webp';
+import imgElfworldWatermelonIce from '@/assets/products/elfworld-12k-watermelon-ice.webp';
+import { standardProductDetails } from './productDetails';
 import type { Product } from './types';
 
-type Seed = { id: number; slug: string; name: string; image: string; price: number; features: string[]; bestseller?: boolean; trending?: boolean };
+type Seed = { id: number; slug: string; name: string; image: string; price: number; features?: string[]; productDetails?: string[]; bestseller?: boolean; trending?: boolean };
 
 const seeds: Seed[] = [
   { id: 301, slug: 'elf-bar-raya-d1-mango-strawberry-ice-cream', name: 'ELF BAR RAYA D1 – Mango Strawberry Ice Cream', image: imgD1MangoStrawberry, price: 2200, features: ['18ml Pre-Filled Vape Juice', '5% (50mg) Nic Salt', 'Rechargeable 650mAh Battery', 'Type-C Charging Port', 'Approximately 13,000 Puffs', 'Anti-Dry Technology', 'E-Liquid & Power Display'] },
@@ -23,6 +32,14 @@ const seeds: Seed[] = [
   { id: 308, slug: 'elf-bar-raya-d3-pro-30k-peach-ice', name: 'Elf Bar Raya D3 Pro – 30K Peach Ice', image: imgD3PeachIce, price: 2999, features: ['Sweet & Juicy Ripe Peach Flavour', 'Refreshing Icy Cool Finish', 'Up to 30,000 Puffs', 'Rechargeable High-Capacity Device', 'Smooth Draw & Consistent Vapour Delivery', 'Rich & Long-Lasting Flavour', 'Sleek & Compact Design', 'Travel-Friendly & Easy to Carry'] },
   { id: 309, slug: 'elf-bar-raya-d3-pro-30k-miami-mint', name: 'Elf Bar Raya D3 Pro 30K – Miami Mint', image: imgD3MiamiMint, price: 2999, trending: true, features: ['Crisp & Refreshing Mint Flavour', 'Cool, Icy Finish', 'Smooth & Satisfying Inhale', 'High-Capacity, Long-Lasting Performance', 'Clean & Invigorating Flavour', 'Convenient & Easy-to-Use Design', 'Portable & Travel-Friendly'] },
   { id: 310, slug: 'elf-bar-raya-d3-pro-30k-blueberry-ice', name: 'Elf Bar Raya D3 Pro 30K – Blueberry Ice', image: imgD3BlueberryIce, price: 2999, bestseller: true, features: ['Sweet & Juicy Ripe Blueberry Flavour', 'Refreshing Flavour Twist', 'Cooling Menthol Finish', 'Crisp Icy Kick', 'Smooth & Satisfying Inhale', 'High-Capacity, Long-Lasting Performance', 'Convenient & Easy-to-Use Design', 'Portable & Travel-Friendly'] },
+  { id: 311, slug: 'elfbar-gh23000-kiwi-passion-fruit-guava', name: 'Elfbar GH23000 Kiwi Passion Fruit Guava', image: imgGhKiwiPassionFruitGuava, price: 2400, productDetails: standardProductDetails },
+  { id: 312, slug: 'elfbar-gh23000-blue-razz-ice-raspberry', name: 'Elfbar GH23000 Blue Razz Ice Raspberry', image: imgGhBlueRazzIceRaspberry, price: 2400, productDetails: standardProductDetails },
+  { id: 313, slug: 'yuzu-15000-puffs-tropical-mango', name: 'YUZU 15000 Puffs Tropical Mango', image: imgYuzuTropicalMango, price: 2300, productDetails: standardProductDetails },
+  { id: 314, slug: 'elfbar-bc5000-watermelon-ice', name: 'Elfbar BC5000 Watermelon Ice', image: imgBc5000WatermelonIce, price: 1500, productDetails: standardProductDetails },
+  { id: 315, slug: 'uwell-caliburn-a3s-16w-pod-kit', name: 'Uwell Caliburn A3S 16W Pod Kit', image: imgCaliburnA3s, price: 4000, productDetails: standardProductDetails },
+  { id: 316, slug: 'elfworld-12000-puffs-mint-menthol', name: 'Elfworld 12000 Puffs Mint Menthol', image: imgElfworldMintMenthol, price: 2000, productDetails: standardProductDetails },
+  { id: 317, slug: 'youto-thanos-antonovka-apple', name: 'Youto Thanos Antonovka Apple', image: imgYoutoAntonovkaApple, price: 1500, productDetails: standardProductDetails },
+  { id: 318, slug: 'elfworld-12k-watermelon-ice', name: 'Elfworld 12K Watermelon Ice', image: imgElfworldWatermelonIce, price: 2000, productDetails: standardProductDetails },
 ];
 
 export const elfBarProducts: Product[] = seeds.map((s) => ({
@@ -36,5 +53,6 @@ export const elfBarProducts: Product[] = seeds.map((s) => ({
   bestseller: s.bestseller ?? false,
   trending: s.trending ?? false,
   relatedProducts: [],
-  features: s.features,
+  ...(s.productDetails ? { productDetails: s.productDetails } : {}),
+  ...(s.features ? { features: s.features } : {}),
 }));
