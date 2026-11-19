@@ -15,6 +15,7 @@ import {
 import { categories } from "@/data/categories";
 import { cities } from "@/data/cities";
 import { contact } from "@/config/contact";
+import { homeSeo } from "@/config/homeSeo";
 import heroImage from "@/assets/hero-vape.jpg";
 import imageOnRequest from "@/assets/image-on-request.webp";
 import elfImage from "@/assets/categories/elf.webp";
@@ -29,17 +30,10 @@ const homeCategories = homeCategorySlugs.map((slug) => categories.find((c) => c.
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "ALL INDIA VAPE SERVICE SHOP | Premium Product Information Across India" },
-      {
-        name: "description",
-        content:
-          "Explore adult-focused device and pod information, brand guides, and support from ALL INDIA VAPE SERVICE SHOP.",
-      },
-      { property: "og:title", content: "ALL INDIA VAPE SERVICE SHOP | Premium Product Information Across India" },
-      {
-        property: "og:description",
-        content: "A curated informational catalog and product research resource serving every corner of India.",
-      },
+      { title: homeSeo.title },
+      { name: "description", content: homeSeo.description },
+      { property: "og:title", content: homeSeo.title },
+      { property: "og:description", content: homeSeo.description },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
     ],
@@ -85,6 +79,7 @@ function Home() {
         <div className="page-container relative z-10 py-14 md:py-16">
           <div className="max-w-[600px]">
             <p className="sr-only">Serving every corner of India</p>
+            <p className="eyebrow text-primary mb-4">{homeSeo.heroDelivery}</p>
             <h1 className="font-display text-[clamp(2.75rem,11vw,6.5rem)] font-semibold leading-[0.9]">
               ALL INDIA
               <br />
@@ -317,23 +312,13 @@ function Home() {
       </section>
       <section className="bg-surface py-10 md:py-16 border-t border-border">
         <div className="page-container">
-          <h2 className="section-title text-primary">Setting the Standard for Premium Gear Accessibility</h2>
-          <div className="text-muted-foreground leading-8 text-sm md:text-base space-y-5 max-w-none md:max-w-5xl lg:max-w-none mt-6">
-            <p>
-              Whether you are searching for the best vape shop in jaipur or looking to upgrade your collection with
-              genuine international modules, our digital-first catalog brings the world's best tech directly to you. We
-              understand that finding an authentic vape store jaipur can be challenging, which is why our
-              community-driven platform eliminates the hassle. From the busy commercial hubs of Sindhi Camp and Sansar
-              Chandra Road to the premium residential sectors of Bani Park and Kabir Marg, we have established a
-              foolproof, private logistics network.
-            </p>
-            <p>
-              Our commitment to quality makes us the top-rated vape shop jaipur enthusiast portal. We strictly curate
-              100% genuine products, ensuring that clients living in the heritage core near Gangori Bazaar or enjoying
-              the scenic outskirts of Amer (opposite Nahargarh Biological Park) receive the exact same high-end,
-              discreet consultation. If you are typing "vape shop near me jaipur" into your browser, look no further.
-              Drop a secure WhatsApp query today to access our private collection.
-            </p>
+          <h2 className="section-title text-primary">{homeSeo.sectionTitle}</h2>
+          <div className="grid md:grid-cols-2 gap-6 md:gap-10 mt-8 text-muted-foreground leading-8 text-sm md:text-base">
+            {homeSeo.paragraphs.map((paragraph) => (
+              <p key={paragraph} className="border-l border-border pl-5 md:pl-6">
+                {paragraph}
+              </p>
+            ))}
           </div>
         </div>
       </section>
