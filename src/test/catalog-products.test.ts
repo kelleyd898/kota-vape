@@ -45,8 +45,8 @@ describe('Owner-supplied product records', () => {
     expect(getProductBySlug(slug)?.productDetails).toEqual(suppliedDetails);
   });
 
-  it('uses the supplied photos for products 1–18', () => {
-    for (const [slug] of suppliedProducts.slice(0, 18)) {
+  it('uses the supplied photos for all 25 products', () => {
+    for (const [slug] of suppliedProducts) {
       expect(getProductBySlug(slug)?.image).not.toContain('image-on-request');
     }
   });

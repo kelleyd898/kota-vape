@@ -26,7 +26,10 @@ import imgGenPt60 from '@/assets/products/gen-pt-60-vape-kit.webp';
 import imgDrag4 from '@/assets/products/drag-4-vape-mod-kit.webp';
 import imgCrownX from '@/assets/products/uwell-crown-x-pod-system.webp';
 import imgSpacemanAppleKiwiIce from '@/assets/products/smok-spaceman-prism-20k-apple-kiwi-ice.webp';
-import imageOnRequest from '@/assets/image-on-request.webp';
+import imgSpacemanBlueRazzIce from '@/assets/products/smok-spaceman-prism-20k-blue-razz-ice.webp';
+import imgYoutoDigiGrapeIce from '@/assets/products/youto-digi-15000-grape-ice.webp';
+import imgRayaD2Tobacco from '@/assets/products/elfbar-raya-d2-tobacco-5-percent-nic.webp';
+import imgGeekBarSkyview from '@/assets/products/geek-bar-skyview-blue-razz-ice.webp';
 import { standardProductDetails } from './productDetails';
 import type { Product } from './types';
 
@@ -61,10 +64,10 @@ const seeds: Seed[] = [
   { id: 326, slug: 'drag-4-vape-mod-kit', name: 'DRAG 4 Vape Mod Kit', image: imgDrag4, price: 4900, productDetails: standardProductDetails },
   { id: 327, slug: 'uwell-crown-x-pod-system', name: 'UWELL Crown X Pod System', image: imgCrownX, price: 2800, productDetails: standardProductDetails },
   { id: 328, slug: 'smok-spaceman-prism-20k-apple-kiwi-ice', name: 'SMOK Spaceman Prism 20K Apple Kiwi Ice', image: imgSpacemanAppleKiwiIce, price: 2200, productDetails: standardProductDetails },
-  { id: 329, slug: 'smok-spaceman-prism-20k-blue-razz-ice', name: 'SMOK Spaceman Prism 20K Blue Razz Ice', image: imageOnRequest, price: 2200, productDetails: standardProductDetails },
-  { id: 330, slug: 'youto-digi-15000-grape-ice', name: 'YOUTO DIGI 15000 Grape Ice', image: imageOnRequest, price: 1800, productDetails: standardProductDetails },
-  { id: 331, slug: 'elfbar-raya-d2-tobacco-5-percent-nic', name: 'Elfbar RAYA D2 Tobacco 5% Nic', image: imageOnRequest, price: 2300, productDetails: standardProductDetails },
-  { id: 332, slug: 'geek-bar-skyview-blue-razz-ice', name: 'Geek Bar Skyview Blue Razz Ice', image: imageOnRequest, price: 2300, productDetails: standardProductDetails },
+  { id: 329, slug: 'smok-spaceman-prism-20k-blue-razz-ice', name: 'SMOK Spaceman Prism 20K Blue Razz Ice', image: imgSpacemanBlueRazzIce, price: 2200, productDetails: standardProductDetails },
+  { id: 330, slug: 'youto-digi-15000-grape-ice', name: 'YOUTO DIGI 15000 Grape Ice', image: imgYoutoDigiGrapeIce, price: 1800, productDetails: standardProductDetails },
+  { id: 331, slug: 'elfbar-raya-d2-tobacco-5-percent-nic', name: 'Elfbar RAYA D2 Tobacco 5% Nic', image: imgRayaD2Tobacco, price: 2300, productDetails: standardProductDetails },
+  { id: 332, slug: 'geek-bar-skyview-blue-razz-ice', name: 'Geek Bar Skyview Blue Razz Ice', image: imgGeekBarSkyview, price: 2300, productDetails: standardProductDetails },
 ];
 
 export const elfBarProducts: Product[] = seeds.map((s) => ({

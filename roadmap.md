@@ -2,7 +2,7 @@
 - [x] Split the illustrative catalog by four categories and keep replacement pods in a separate collection and page.
 - [x] Use the four supplied category names with home-only category imagery, update navigation/filtering, and reduce gold saturation.
 - [x] Verify desktop/mobile navigation, filtering, detail pages and WhatsApp message.
-- [ ] Await Nic Salts product records and product photos 19–25 from the owner.
+- [ ] Await Nic Salts product records from the owner.
 - [x] Add fixed bottom-center query prompt and update floating WhatsApp message.
 - [x] Use supplied SEO phrases for Kota naturally without a scrolling keyword strip; clean logo outside its circle.
 - [x] Update homepage headings and spotlight copy, remove the four-value strip, and direct the spotlight inquiry to WhatsApp.
@@ -18,3 +18,4 @@
 - [x] Add eight owner-supplied products with their WebP photos and shared Product Details.
 - [x] Add products 9–25 with available photos, placeholders and shared Product Details.
 - [x] Add the supplied WebP photos for products 10–18.
+- [x] Add the supplied WebP photos for products 19–25.
