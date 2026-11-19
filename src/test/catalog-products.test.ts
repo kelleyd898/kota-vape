@@ -44,6 +44,14 @@ const suppliedDetails = [
 ];
 
 describe('Homepage product collection', () => {
+  it('shows exactly six products in Trending Now and six in Best Sellers', () => {
+    expect(homeTrendingProducts).toHaveLength(6);
+    expect(homeBestSellerProducts).toHaveLength(6);
+    const trendingSlugs = homeTrendingProducts.map((product) => product.slug);
+    const bestSellerSlugs = homeBestSellerProducts.map((product) => product.slug);
+    expect(trendingSlugs.filter((slug) => bestSellerSlugs.includes(slug))).toEqual([]);
+  });
+
   it('uses only the four main shop categories and never Replacement Pods', () => {
     const allowedCategories = new Set(['Elf Bar', 'IGET Vape', 'Nic Salts', 'Terra']);
     const homepageProducts = [

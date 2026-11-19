@@ -166,7 +166,7 @@ function Home() {
             <div className="[&_h2]:text-primary">
               <SectionHeading title="Trending Now" link="/shop" />
             </div>
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-3 md:gap-5">
+            <div className="grid grid-cols-2 md:grid-cols-3 gap-3 md:gap-5">
               {homeTrendingProducts.map((p) => (
                  <ProductCard key={p.id} product={p} showDiscount />
               ))}
@@ -179,7 +179,7 @@ function Home() {
           <div className="[&_h2]:text-primary">
             <SectionHeading title="Best Sellers" link="/shop" />
           </div>
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-3 md:gap-5">
+          <div className="grid grid-cols-2 md:grid-cols-3 gap-3 md:gap-5">
             {homeBestSellerProducts.map((p) => (
                <ProductCard key={p.id} product={p} showDiscount />
              ))}

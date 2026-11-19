@@ -14,6 +14,7 @@ export const terraProducts: Product[] = [
     originalPrice: 8000,
     category: 'Terra',
     bestseller: false,
+    trending: true,
     relatedProducts: ['iqos-terea-silver', 'iqos-terea-bronze'],
     features: [
       'Product Type: Heated Tobacco Sticks',
@@ -31,7 +32,7 @@ export const terraProducts: Product[] = [
     price: 5000,
     originalPrice: 8000,
     category: 'Terra',
-    bestseller: false,
+    bestseller: true,
     relatedProducts: ['iqos-terea-twilight-pearl', 'iqos-terea-bronze'],
     features: [
       'Product Type: Heated Tobacco Sticks',
@@ -49,7 +50,7 @@ export const terraProducts: Product[] = [
     price: 5000,
     originalPrice: 8000,
     category: 'Terra',
-    bestseller: false,
+    bestseller: true,
     relatedProducts: ['iqos-terea-twilight-pearl', 'iqos-terea-silver'],
     features: [
       'Product Type: Heated Tobacco Sticks',
