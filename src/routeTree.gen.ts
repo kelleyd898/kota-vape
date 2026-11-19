@@ -22,6 +22,7 @@ import { Route as ReplacementPodsRouteImport } from './routes/replacement-pods'
 import { Route as ShippingPolicyRouteImport } from './routes/shipping-policy'
 import { Route as ShopRouteImport } from './routes/shop'
 import { Route as TermsRouteImport } from './routes/terms'
+import { Route as WhatsappRedirectRouteImport } from './routes/whatsapp-redirect'
 import { Route as ProductSlugRouteImport } from './routes/product.$slug'
 import { Route as VapeInCityRouteImport } from './routes/vape-in.$city'
 
@@ -90,6 +91,11 @@ const TermsRoute = TermsRouteImport.update({
   path: '/terms',
   getParentRoute: () => rootRouteImport,
 } as any)
+const WhatsappRedirectRoute = WhatsappRedirectRouteImport.update({
+  id: '/whatsapp-redirect',
+  path: '/whatsapp-redirect',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const ProductSlugRoute = ProductSlugRouteImport.update({
   id: '/product/$slug',
   path: '/product/$slug',
@@ -115,6 +121,7 @@ export interface FileRoutesByFullPath {
   '/shipping-policy': typeof ShippingPolicyRoute
   '/shop': typeof ShopRoute
   '/terms': typeof TermsRoute
+  '/whatsapp-redirect': typeof WhatsappRedirectRoute
   '/product/$slug': typeof ProductSlugRoute
   '/vape-in/$city': typeof VapeInCityRoute
 }
@@ -132,6 +139,7 @@ export interface FileRoutesByTo {
   '/shipping-policy': typeof ShippingPolicyRoute
   '/shop': typeof ShopRoute
   '/terms': typeof TermsRoute
+  '/whatsapp-redirect': typeof WhatsappRedirectRoute
   '/product/$slug': typeof ProductSlugRoute
   '/vape-in/$city': typeof VapeInCityRoute
 }
@@ -150,6 +158,7 @@ export interface FileRoutesById {
   '/shipping-policy': typeof ShippingPolicyRoute
   '/shop': typeof ShopRoute
   '/terms': typeof TermsRoute
+  '/whatsapp-redirect': typeof WhatsappRedirectRoute
   '/product/$slug': typeof ProductSlugRoute
   '/vape-in/$city': typeof VapeInCityRoute
 }
@@ -169,6 +178,7 @@ export interface FileRouteTypes {
     | '/shipping-policy'
     | '/shop'
     | '/terms'
+    | '/whatsapp-redirect'
     | '/product/$slug'
     | '/vape-in/$city'
   fileRoutesByTo: FileRoutesByTo
@@ -186,6 +196,7 @@ export interface FileRouteTypes {
     | '/shipping-policy'
     | '/shop'
     | '/terms'
+    | '/whatsapp-redirect'
     | '/product/$slug'
     | '/vape-in/$city'
   id:
@@ -203,6 +214,7 @@ export interface FileRouteTypes {
     | '/shipping-policy'
     | '/shop'
     | '/terms'
+    | '/whatsapp-redirect'
     | '/product/$slug'
     | '/vape-in/$city'
   fileRoutesById: FileRoutesById
@@ -221,6 +233,7 @@ export interface RootRouteChildren {
   ShippingPolicyRoute: typeof ShippingPolicyRoute
   ShopRoute: typeof ShopRoute
   TermsRoute: typeof TermsRoute
+  WhatsappRedirectRoute: typeof WhatsappRedirectRoute
   ProductSlugRoute: typeof ProductSlugRoute
   VapeInCityRoute: typeof VapeInCityRoute
 }
@@ -318,6 +331,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof TermsRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/whatsapp-redirect': {
+      id: '/whatsapp-redirect'
+      path: '/whatsapp-redirect'
+      fullPath: '/whatsapp-redirect'
+      preLoaderRoute: typeof WhatsappRedirectRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/product/$slug': {
       id: '/product/$slug'
       path: '/product/$slug'
@@ -349,6 +369,7 @@ const rootRouteChildren: RootRouteChildren = {
   ShippingPolicyRoute: ShippingPolicyRoute,
   ShopRoute: ShopRoute,
   TermsRoute: TermsRoute,
+  WhatsappRedirectRoute: WhatsappRedirectRoute,
   ProductSlugRoute: ProductSlugRoute,
   VapeInCityRoute: VapeInCityRoute,
 }

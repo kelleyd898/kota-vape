@@ -1,3 +1,4 @@
+import { whatsAppUrl } from '@/lib/whatsapp';
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { ArrowRight, ArrowUpRight, BadgeCheck, MapPin, ShieldCheck, Sparkles, SearchCheck } from "lucide-react";
 import { WhatsAppIcon } from "@/components/site/WhatsAppIcon";
@@ -45,10 +46,10 @@ export const Route = createFileRoute("/")({
   component: Home,
 });
 const spotlightWhatsAppUrl = contact.whatsapp
-  ? `https://wa.me/${contact.whatsapp.replace(/\D/g, "")}?text=${encodeURIComponent("Hi, I read the Spotlight Review for the LUXE Q2 SE. Can you share availability?")}`
+  ? whatsAppUrl("Hi, I read the Spotlight Review for the LUXE Q2 SE. Can you share availability?")
   : null;
 const heroWhatsAppUrl = contact.whatsapp
-  ? `https://wa.me/${contact.whatsapp.replace(/\D/g, "")}?text=${encodeURIComponent("Hi, I want to order vape products")}`
+  ? whatsAppUrl("Hi, I want to order vape products")
   : null;
 const reasons = [
   {

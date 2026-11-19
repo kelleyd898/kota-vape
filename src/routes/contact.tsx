@@ -1,10 +1,11 @@
+import { whatsAppUrl } from '@/lib/whatsapp';
 import { createFileRoute } from '@tanstack/react-router';
 import { Mail, MessageCircle } from 'lucide-react';
 import { contact } from '@/config/contact';
 import { cities } from '@/data/cities';
 
 const waDigits = contact.whatsapp.replace(/\D/g, '');
-const whatsappUrl = contact.whatsapp ? `https://wa.me/${waDigits}?text=${encodeURIComponent('Hello, I have a question.')}` : '';
+const whatsappUrl = contact.whatsapp ? whatsAppUrl('Hello, I have a question.') : '';
 
 const toc = [
   { id: 'get-in-touch', label: '1. Get in Touch With Us' },

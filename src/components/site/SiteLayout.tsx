@@ -1,3 +1,4 @@
+import { whatsAppUrl } from '@/lib/whatsapp';
 import { useEffect, useState } from 'react';
 import { Link } from '@tanstack/react-router';
 import { ArrowRight, ChevronDown, Menu, Search, X } from 'lucide-react';
@@ -14,7 +15,7 @@ import { AllIndiaStrip } from '@/components/site/AllIndiaStrip';
 
 const consultationMessage = 'Hi, I need expert consultation regarding premium modules.';
 const consultationUrl = contact.whatsapp
-  ? `https://wa.me/${contact.whatsapp.replace(/\D/g, '')}?text=${encodeURIComponent(consultationMessage)}`
+  ? whatsAppUrl(consultationMessage)
   : null;
 
 const scrollToTop = () => { setTimeout(() => window.scrollTo({ top: 0, behavior: 'smooth' }), 60); };
