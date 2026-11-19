@@ -1,6 +1,6 @@
 import { whatsAppUrl } from '@/lib/whatsapp';
 import { createFileRoute, Link } from "@tanstack/react-router";
-import { ArrowRight, ArrowUpRight, BadgeCheck, MapPin, ShieldCheck, Sparkles, SearchCheck } from "lucide-react";
+import { ArrowRight, BadgeCheck, MapPin, ShieldCheck, Sparkles, SearchCheck } from "lucide-react";
 import { WhatsAppIcon } from "@/components/site/WhatsAppIcon";
 import { AllIndiaStrip } from "@/components/site/AllIndiaStrip";
 import { Button } from "@/components/ui/button";
@@ -8,24 +8,14 @@ import { ProductCard } from "@/components/site/ProductCard";
 import { SectionHeading } from "@/components/site/SectionHeading";
 import {
   homeBestSellerProducts,
-  homeCatalogProducts,
   homeCollectionProducts,
   homeTrendingProducts,
 } from "@/data/homeCatalog";
-import { categories } from "@/data/categories";
 import { cities } from "@/data/cities";
 import { contact } from "@/config/contact";
 import { homeSeo } from "@/config/homeSeo";
 import heroImage from "@/assets/hero-vape.jpg";
 import imageOnRequest from "@/assets/image-on-request.webp";
-import elfImage from "@/assets/categories/elf.webp";
-import saltImage from "@/assets/categories/Pod-salt.webp";
-import igetImage from "@/assets/categories/iget.webp";
-import terraImage from "@/assets/categories/terra.webp";
-const homeCategoryImages = [elfImage, igetImage, saltImage, terraImage];
-// Landing page shows the 4 shop categories.
-const homeCategorySlugs = ["elf-bar", "iget-vape", "nic-salts", "terra"];
-const homeCategories = homeCategorySlugs.map((slug) => categories.find((c) => c.slug === slug)!).filter(Boolean);
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -110,7 +100,9 @@ function Home() {
                 size="lg"
                 className="h-12 px-7 uppercase tracking-widest text-xs font-bold bg-transparent w-full sm:w-auto"
               >
-                <Link to="/about">Our approach</Link>
+                <Link to="/shop">
+                  Browse Products <ArrowRight />
+                </Link>
               </Button>
             </div>
             <AllIndiaStrip className="mt-6 md:mt-7" />
@@ -130,36 +122,6 @@ function Home() {
           ))}
         </div>
       </div>
-      <section className="py-10 md:py-16 page-container">
-        <div className="[&_h2]:text-primary">
-          <SectionHeading title="Categories" link="/categories" />
-        </div>
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-3 md:gap-5">
-          {homeCategories.map((category, i) => (
-            <Link
-              key={category.slug}
-              to="/shop"
-              search={{ q: "", category: category.name }}
-              className="group relative aspect-[4/5] overflow-hidden border border-border bg-card"
-            >
-              <img
-                src={homeCategoryImages[i]}
-                alt={`Illustrative ${category.name} category`}
-                loading="lazy"
-                className="w-full h-full object-cover opacity-80 transition-transform duration-500 group-hover:scale-105"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent" />
-              <div className="absolute bottom-4 left-4 right-4">
-                <p className="text-[10px] uppercase tracking-widest text-muted-foreground">{category.name}</p>
-                <div className="flex justify-between items-end mt-1">
-                  <h3 className="font-display text-2xl sm:text-3xl font-semibold">{category.name}</h3>
-                  <ArrowUpRight size={20} className="text-primary" />
-                </div>
-              </div>
-            </Link>
-          ))}
-        </div>
-      </section>
       {homeTrendingProducts.length > 0 && (
         <section className="py-10 md:py-16 bg-surface">
           <div className="page-container">

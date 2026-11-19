@@ -1,39 +1,45 @@
 import { QueryClient } from "@tanstack/react-query";
 import { createMemoryHistory, createRouter, RouterProvider } from "@tanstack/react-router";
-import { cleanup, render, waitFor } from "@testing-library/react";
+import { renderToString } from "react-dom/server";
 import { afterEach, describe, expect, it, vi } from "vitest";
 
 import { routeTree } from "@/routeTree.gen";
 
-function renderAt(path: string) {
+// The root shell renders a full <html> document, which jsdom cannot mount inside a
+// div container, so the router is rendered to a string instead of into a live node.
+async function renderAt(path: string) {
   const queryClient = new QueryClient();
   const router = createRouter({
     routeTree,
     context: { queryClient },
     history: createMemoryHistory({ initialEntries: [path] }),
   });
-  return render(<RouterProvider router={router} />);
+  await router.load();
+  return renderToString(<RouterProvider router={router} />);
 }
 
 afterEach(() => {
-  cleanup();
   vi.restoreAllMocks();
 });
 
-// Assert only that the router mounts and paints, never page content:
+// Assert only that the router mounts and paints a document shell, never page content:
 // routes are rewritten as the app is built and this must keep passing.
 describe("App routing", () => {
   it("renders the index route", async () => {
-    const { container } = renderAt("/");
+    const html = await renderAt("/");
 
-    await waitFor(() => expect(container.firstChild).not.toBeNull());
+    expect(html).toContain("<html");
+    expect(html).toContain("<body");
+    expect(html.length).toBeGreaterThan(1000);
   });
 
   it("renders the not-found route", async () => {
     vi.spyOn(console, "warn").mockImplementation(() => undefined);
 
-    const { container } = renderAt("/this-route-does-not-exist");
+    const html = await renderAt("/this-route-does-not-exist");
 
-    await waitFor(() => expect(container.firstChild).not.toBeNull());
+    expect(html).toContain("<html");
+    expect(html).toContain("<body");
+    expect(html.length).toBeGreaterThan(1000);
   });
 });
