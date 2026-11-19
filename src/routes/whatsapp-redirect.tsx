@@ -4,7 +4,7 @@ import { MessageCircle } from 'lucide-react';
 import { directWhatsAppUrl } from '@/lib/whatsapp';
 
 export const Route = createFileRoute('/whatsapp-redirect')({
-  validateSearch: (s: Record<string, unknown>) => ({ text: typeof s.text === 'string' ? s.text : 'Hi, I want to order vape products' }),
+  validateSearch: (s: Record<string, unknown>) => ({ text: typeof s['text'] === 'string' ? s['text'] : 'Hi, I want to order vape products' }),
   head: () => ({
     meta: [
       { title: 'Connecting to WhatsApp — ALL INDIA VAPE SERVICE SHOP' },
