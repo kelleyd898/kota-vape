@@ -22,3 +22,5 @@
 - [x] Show a large, non-duplicated premium product collection on the homepage using only the four main shop categories.
 - [x] Add owner-supplied Gurgaon, Delhi NCR, product and brand keywords to homepage SEO metadata and readable content.
 - [x] Reduce the WhatsApp redirect wait for faster mobile handoff while retaining the conversion page.
+- [x] Replace Gurgaon/Delhi NCR wording with all-India wording in homepage title, hero and SEO section.
+- [x] Point the hero button to the shop page as "Browse Products" and remove the homepage Categories section.
