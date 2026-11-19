@@ -16,7 +16,8 @@ import imageOnRequest from "@/assets/image-on-request.webp";
 import elfImage from "@/assets/categories/elf.webp";
 import saltImage from "@/assets/categories/Pod-salt.webp";
 import igetImage from "@/assets/categories/iget.webp";
-const homeCategoryImages = [elfImage, igetImage, saltImage, imageOnRequest];
+import terraImage from "@/assets/categories/terra.webp";
+const homeCategoryImages = [elfImage, igetImage, saltImage, terraImage];
 // Landing page shows the 4 shop categories.
 const homeCategorySlugs = ["elf-bar", "iget-vape", "nic-salts", "terra"];
 const homeCategories = homeCategorySlugs.map((slug) => categories.find((c) => c.slug === slug)!).filter(Boolean);
