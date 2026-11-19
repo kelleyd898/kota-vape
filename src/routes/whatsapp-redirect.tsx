@@ -23,7 +23,7 @@ function RedirectPage() {
   const { text } = Route.useSearch();
   const url = directWhatsAppUrl(text);
   useEffect(() => {
-    const t = setTimeout(() => window.location.replace(url), 1500);
+    const t = setTimeout(() => window.location.replace(url), 300);
     return () => clearTimeout(t);
   }, [url]);
   return (
